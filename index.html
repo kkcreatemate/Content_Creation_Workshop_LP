@@ -1,0 +1,3014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KK Create Creator Academy — Content Creation Course for Beginners</title>
+<meta name="description" content="Zero se content creator banne ka complete roadmap. Niche, ideas, YouTube algorithm, thumbnails, editing, AI aur earning — sab kuch ek recorded course mein. ₹999.">
+<meta name="theme-color" content="#0B0A1F">
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="KK Create Creator Academy — Content Creation for Beginners">
+<meta property="og:description" content="Zero se creator banne ka complete roadmap. Recorded course, lifetime access. ₹999.">
+<meta property="og:type" content="website">
+
+<!-- ============================================================
+     FONTS — Montserrat (headings) + Inter (body)
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   1. DESIGN TOKENS
+   Change these to re-skin the whole page.
+   ============================================================ */
+:root{
+  /* Base */
+  --ink:        #0B0A1F;   /* page background */
+  --ink-2:      #100D2A;   /* slightly lifted background */
+  --surface:    rgba(255,255,255,.045);   /* glass card fill */
+  --surface-2:  rgba(255,255,255,.07);    /* glass card hover */
+  --border:     rgba(255,255,255,.10);    /* glass card border */
+  --border-2:   rgba(255,255,255,.18);
+
+  /* Brand */
+  --violet:     #7C3AED;
+  --violet-lt:  #A78BFA;
+  --magenta:    #EC4899;
+  --blue:       #3B82F6;
+  --cyan:       #22D3EE;
+  --lime:       #B4F461;
+  --lime-dk:    #8FD14F;
+
+  /* Text */
+  --cream:      #FFF8F0;
+  --text:       #EDE9F5;
+  --text-soft:  #B9B4CC;
+  --text-dim:   #8B86A0;
+
+  /* Gradients */
+  --grad-primary: linear-gradient(135deg, var(--violet) 0%, var(--magenta) 100%);
+  --grad-lime:    linear-gradient(135deg, #C9FF7A 0%, var(--lime) 50%, var(--lime-dk) 100%);
+  --grad-text:    linear-gradient(100deg, #FFF8F0 0%, #E9D5FF 40%, #FBCFE8 70%, #FFF8F0 100%);
+
+  /* Spacing / shape */
+  --radius:     20px;
+  --radius-lg:  28px;
+  --gutter:     16px;
+  --maxw:       1180px;
+
+  /* Shadows */
+  --glow-violet: 0 0 60px rgba(124,58,237,.45);
+  --glow-lime:   0 10px 30px -8px rgba(180,244,97,.5);
+  --card-shadow: 0 20px 50px -20px rgba(0,0,0,.7);
+}
+
+/* ============================================================
+   2. RESET + BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--text);
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit;}
+input,select,textarea{font-family:inherit;font-size:16px;} /* 16px stops iOS zoom-on-focus */
+
+h1,h2,h3,h4{
+  font-family:'Montserrat',system-ui,sans-serif;
+  font-weight:900;
+  line-height:1.05;
+  letter-spacing:-.025em;
+  color:var(--cream);
+  margin:0 0 .5em;
+}
+h1{font-size:clamp(2.5rem,8.5vw,5.5rem);}
+h2{font-size:clamp(2rem,6.5vw,3.5rem);}
+h3{font-size:clamp(1.15rem,3.6vw,1.5rem);letter-spacing:-.015em;}
+p{margin:0 0 1em;}
+.lead{font-size:clamp(1rem,3.6vw,1.2rem);color:var(--text-soft);max-width:62ch;}
+
+/* Accessible focus ring — visible on the dark base */
+:focus-visible{
+  outline:3px solid var(--lime);
+  outline-offset:3px;
+  border-radius:6px;
+}
+
+/* Screen-reader only */
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+
+/* ============================================================
+   3. LAYOUT HELPERS
+   ============================================================ */
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);}
+section.band{position:relative;padding:clamp(72px,13vw,140px) 0;z-index:10;}
+.center{text-align:center;}
+.center .lead{margin-left:auto;margin-right:auto;}
+
+/* Eyebrow label above section headings */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Montserrat',sans-serif;font-weight:800;
+  font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--violet-lt);
+  padding:7px 14px;margin-bottom:20px;
+  border:1px solid var(--border);border-radius:100px;
+  background:rgba(124,58,237,.1);
+  backdrop-filter:blur(10px);
+}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 10px var(--lime);}
+
+/* Gradient text */
+.grad-text{
+  background:var(--grad-text);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.lime-text{color:var(--lime);}
+
+/* ============================================================
+   4. LIVING BACKGROUND
+   Four fixed layers behind all content:
+     .bg-aurora  — slow drifting gradient orbs
+     #bgCanvas   — starfield + floating creator shapes (JS)
+     .bg-grid    — faint cinematic grid
+     .bg-noise   — film grain
+   ============================================================ */
+.bg-layer{position:fixed;inset:0;pointer-events:none;}
+
+.bg-aurora{z-index:0;overflow:hidden;}
+.orb{
+  position:absolute;border-radius:50%;
+  filter:blur(90px);
+  opacity:.5;
+  will-change:transform;
+}
+.orb-1{width:46vw;height:46vw;min-width:320px;min-height:320px;background:radial-gradient(circle,rgba(124,58,237,.95),transparent 68%);top:-12vw;left:-10vw;animation:drift1 34s ease-in-out infinite;}
+.orb-2{width:40vw;height:40vw;min-width:280px;min-height:280px;background:radial-gradient(circle,rgba(236,72,153,.85),transparent 68%);top:28vh;right:-14vw;animation:drift2 42s ease-in-out infinite;}
+.orb-3{width:50vw;height:50vw;min-width:300px;min-height:300px;background:radial-gradient(circle,rgba(59,130,246,.75),transparent 68%);bottom:-16vw;left:18vw;animation:drift3 48s ease-in-out infinite;}
+.orb-4{width:28vw;height:28vw;min-width:200px;min-height:200px;background:radial-gradient(circle,rgba(34,211,238,.5),transparent 70%);top:58vh;left:-8vw;animation:drift2 38s ease-in-out infinite reverse;}
+
+@keyframes drift1{
+  0%,100%{transform:translate3d(0,0,0) scale(1);}
+  33%{transform:translate3d(12vw,8vh,0) scale(1.14);}
+  66%{transform:translate3d(-6vw,16vh,0) scale(.92);}
+}
+@keyframes drift2{
+  0%,100%{transform:translate3d(0,0,0) scale(1);}
+  50%{transform:translate3d(-14vw,-10vh,0) scale(1.2);}
+}
+@keyframes drift3{
+  0%,100%{transform:translate3d(0,0,0) scale(1);}
+  40%{transform:translate3d(10vw,-12vh,0) scale(1.1);}
+  75%{transform:translate3d(-10vw,-4vh,0) scale(.95);}
+}
+
+#bgCanvas{z-index:1;width:100%;height:100%;}
+
+.bg-grid{
+  z-index:2;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:clamp(44px,7vw,72px) clamp(44px,7vw,72px);
+  /* fade the grid out through the middle so it never fights the text */
+  -webkit-mask-image:linear-gradient(to bottom,#000,rgba(0,0,0,.25) 45%,#000);
+  mask-image:linear-gradient(to bottom,#000,rgba(0,0,0,.25) 45%,#000);
+}
+
+.bg-noise{
+  z-index:3;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Desktop cursor-follow glow */
+.bg-cursor{
+  z-index:4;opacity:0;
+  transition:opacity .6s ease;
+  background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),rgba(167,139,250,.11),transparent 70%);
+}
+@media (hover:hover) and (pointer:fine){ .bg-cursor.on{opacity:1;} }
+
+/* Per-section glow — each section gets its own colour + position so it
+   feels distinct while the dark base stays consistent. */
+section.band::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:var(--section-glow,none);
+}
+.glow-hero      {--section-glow:radial-gradient(900px 600px at 50% 0%,rgba(124,58,237,.3),transparent 70%);}
+.glow-pain      {--section-glow:radial-gradient(760px 520px at 8% 40%,rgba(59,130,246,.22),transparent 70%);}
+.glow-modules   {--section-glow:radial-gradient(820px 560px at 92% 30%,rgba(236,72,153,.22),transparent 70%);}
+.glow-card      {--section-glow:radial-gradient(800px 560px at 15% 55%,rgba(34,211,238,.2),transparent 70%),radial-gradient(600px 400px at 85% 10%,rgba(124,58,237,.22),transparent 70%);}
+.glow-wheel     {--section-glow:radial-gradient(760px 560px at 50% 45%,rgba(180,244,97,.14),transparent 68%),radial-gradient(700px 500px at 85% 80%,rgba(236,72,153,.2),transparent 70%);}
+.glow-workshop  {--section-glow:radial-gradient(800px 520px at 20% 25%,rgba(59,130,246,.26),transparent 70%);}
+.glow-instructor{--section-glow:radial-gradient(820px 560px at 80% 50%,rgba(124,58,237,.24),transparent 70%);}
+.glow-proof     {--section-glow:radial-gradient(760px 520px at 12% 60%,rgba(236,72,153,.18),transparent 70%);}
+.glow-pricing   {--section-glow:radial-gradient(900px 640px at 50% 50%,rgba(180,244,97,.13),transparent 65%),radial-gradient(700px 500px at 15% 15%,rgba(124,58,237,.26),transparent 70%);}
+.glow-faq       {--section-glow:radial-gradient(700px 500px at 88% 40%,rgba(59,130,246,.18),transparent 70%);}
+.glow-final     {--section-glow:radial-gradient(1000px 700px at 50% 70%,rgba(236,72,153,.28),transparent 65%),radial-gradient(800px 600px at 20% 10%,rgba(124,58,237,.3),transparent 70%);}
+
+/* Curved wave dividers between sections */
+.wave{position:relative;z-index:10;line-height:0;margin:-1px 0;pointer-events:none;}
+.wave svg{display:block;width:100%;height:clamp(48px,7vw,96px);}
+.wave .fill{fill:rgba(255,255,255,.022);}
+.wave .line{fill:none;stroke:url(#waveGrad);stroke-width:1.5;opacity:.55;}
+.wave.flip svg{transform:rotate(180deg);}
+
+/* ============================================================
+   5. BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:'Montserrat',sans-serif;font-weight:800;
+  font-size:clamp(.95rem,2.6vw,1.05rem);letter-spacing:-.01em;
+  padding:17px 30px;border-radius:100px;
+  text-align:center;position:relative;
+  transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s ease,background .25s ease;
+  will-change:transform;
+}
+.btn-primary{
+  background:var(--grad-lime);color:#0A1403;
+  box-shadow:var(--glow-lime);
+}
+.btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 16px 42px -8px rgba(180,244,97,.72);}
+.btn-primary:active{transform:translateY(-1px) scale(.99);}
+
+.btn-ghost{
+  background:var(--surface);color:var(--cream);
+  border:1px solid var(--border-2);
+  backdrop-filter:blur(12px);
+}
+.btn-ghost:hover{background:var(--surface-2);transform:translateY(-3px);border-color:rgba(255,255,255,.3);}
+
+.btn-grad{
+  background:var(--grad-primary);color:#fff;
+  box-shadow:0 10px 32px -10px rgba(236,72,153,.6);
+}
+.btn-grad:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 16px 44px -10px rgba(236,72,153,.75);}
+
+.btn-block{display:flex;width:100%;}
+.btn-lg{padding:20px 38px;font-size:clamp(1rem,3vw,1.2rem);}
+
+/* Shine sweep on primary CTAs */
+.btn-primary::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;overflow:hidden;
+  background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);
+  background-size:220% 100%;background-position:220% 0;
+  transition:background-position .8s ease;
+}
+.btn-primary:hover::after{background-position:-120% 0;}
+
+/* ============================================================
+   6. GLASS CARDS
+   ============================================================ */
+.glass{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  box-shadow:var(--card-shadow);
+  padding:26px;
+  position:relative;
+  overflow:hidden;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s ease,background .35s ease;
+}
+/* Top hairline highlight for depth */
+.glass::before{
+  content:"";position:absolute;top:0;left:12%;right:12%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+}
+.glass:hover{transform:translateY(-6px);border-color:var(--border-2);background:var(--surface-2);}
+
+/* The hidden attribute must win over author display rules
+   (otherwise .incl li{display:flex} un-hides the won-bonus row). */
+[hidden]{display:none !important;}
+
+.grid{display:grid;gap:clamp(14px,2.4vw,22px);}
+.g-2{grid-template-columns:repeat(2,1fr);}
+.g-3{grid-template-columns:repeat(3,1fr);}
+@media (max-width:900px){.g-3{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.g-2,.g-3{grid-template-columns:1fr;}}
+
+/* Icon chip used across cards */
+.chip{
+  width:50px;height:50px;flex:0 0 auto;
+  display:grid;place-items:center;
+  border-radius:15px;margin-bottom:16px;
+  background:rgba(124,58,237,.18);
+  border:1px solid rgba(167,139,250,.3);
+  font-size:1.5rem;
+}
+.chip svg{width:24px;height:24px;stroke:var(--violet-lt);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+/* ============================================================
+   7. SCROLL REVEAL (JS adds .in)
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.2,.8,.2,1),transform .75s cubic-bezier(.2,.8,.2,1);}
+.reveal.in{opacity:1;transform:none;}
+.reveal.d1{transition-delay:.08s;} .reveal.d2{transition-delay:.16s;}
+.reveal.d3{transition-delay:.24s;} .reveal.d4{transition-delay:.32s;}
+.reveal.d5{transition-delay:.4s;}  .reveal.d6{transition-delay:.48s;}
+
+/* ============================================================
+   8. HEADER
+   ============================================================ */
+header.site{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:14px 0;
+  transition:background .3s ease,backdrop-filter .3s ease,border-color .3s ease;
+  border-bottom:1px solid transparent;
+}
+header.site.stuck{
+  background:rgba(11,10,31,.82);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom-color:var(--border);
+}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.logo{display:flex;align-items:center;gap:11px;}
+.logo-mark{
+  width:40px;height:40px;border-radius:12px;
+  display:grid;place-items:center;
+  background:var(--grad-primary);
+  font-family:'Montserrat',sans-serif;font-weight:900;font-size:.95rem;
+  color:#fff;letter-spacing:-.02em;
+  box-shadow:0 6px 20px -6px rgba(124,58,237,.9);
+}
+.logo-text .name{display:block;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.98rem;color:var(--cream);line-height:1.2;}
+.logo-text .tag{display:block;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);font-weight:600;}
+.nav-links{display:flex;gap:26px;align-items:center;}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--text-soft);transition:color .2s ease;}
+.nav-links a:hover{color:var(--cream);}
+header .btn{padding:12px 22px;font-size:.88rem;}
+@media (max-width:860px){ .nav-links{display:none;} }
+@media (max-width:420px){ header .btn-primary{padding:11px 18px;font-size:.82rem;} .logo-text{display:none;} }
+
+/* ============================================================
+   9. HERO
+   ============================================================ */
+.hero{padding-top:clamp(120px,22vw,190px);padding-bottom:clamp(60px,10vw,110px);}
+.hero h1{margin-bottom:22px;}
+.hero h1 .line{display:block;}
+.hero .lead{font-size:clamp(1.02rem,3.9vw,1.3rem);margin-bottom:34px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px;}
+@media (max-width:620px){ .hero-ctas{flex-direction:column;} .hero-ctas .btn{width:100%;} }
+.hero-note{font-size:.85rem;color:var(--text-dim);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+
+/* Trust counter row */
+.stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,2vw,20px);
+  margin-top:clamp(40px,7vw,64px);
+}
+.stat{
+  padding:22px 18px;text-align:center;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);backdrop-filter:blur(14px);
+}
+.stat .num{
+  font-family:'Montserrat',sans-serif;font-weight:900;
+  font-size:clamp(1.6rem,6.2vw,2.75rem);line-height:1;
+  background:var(--grad-text);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  display:block;margin-bottom:7px;
+}
+.stat .lbl{font-size:clamp(.66rem,2.1vw,.78rem);letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);font-weight:600;line-height:1.3;}
+.stat.hero-stat{border-color:rgba(180,244,97,.28);background:rgba(180,244,97,.05);}
+.stat.hero-stat .num{background:var(--grad-lime);-webkit-background-clip:text;background-clip:text;}
+
+/* Floating badge pill in hero */
+.hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;}
+.pill{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.78rem;font-weight:600;color:var(--text-soft);
+  padding:8px 14px;border-radius:100px;
+  background:var(--surface);border:1px solid var(--border);
+  backdrop-filter:blur(10px);
+}
+.pill .tick{color:var(--lime);font-weight:800;}
+
+/* ============================================================
+   10. PAIN POINTS
+   ============================================================ */
+.pain-card{display:flex;flex-direction:column;}
+.pain-card .chip{background:rgba(59,130,246,.16);border-color:rgba(59,130,246,.32);}
+.pain-card .chip svg{stroke:#93C5FD;}
+.pain-card h3{margin-bottom:8px;font-size:1.08rem;}
+.pain-card p{color:var(--text-soft);font-size:.94rem;margin:0;}
+
+.pain-bridge{
+  margin-top:clamp(28px,5vw,48px);text-align:center;
+  padding:clamp(26px,5vw,40px);
+  border-radius:var(--radius-lg);
+  background:linear-gradient(135deg,rgba(124,58,237,.18),rgba(236,72,153,.14));
+  border:1px solid var(--border-2);
+  backdrop-filter:blur(14px);
+}
+.pain-bridge p{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.1rem,4vw,1.6rem);color:var(--cream);margin:0;line-height:1.35;letter-spacing:-.02em;}
+
+/* ============================================================
+   11. MODULES
+   ============================================================ */
+.module{display:flex;flex-direction:column;}
+.module .mod-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px;}
+.module .mod-no{
+  font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.05rem;
+  width:42px;height:42px;flex:0 0 auto;border-radius:12px;
+  display:grid;place-items:center;
+  background:rgba(236,72,153,.16);border:1px solid rgba(236,72,153,.34);
+  color:#FBCFE8;
+}
+.module h3{margin:0;font-size:1.08rem;padding-top:8px;}
+.module p{color:var(--text-soft);font-size:.93rem;margin:0 0 14px;}
+.module .mod-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;}
+.module .mod-tags span{
+  font-size:.7rem;font-weight:600;letter-spacing:.03em;
+  padding:5px 10px;border-radius:7px;
+  background:rgba(255,255,255,.06);border:1px solid var(--border);
+  color:var(--text-dim);
+}
+
+/* ============================================================
+   12. CREATOR CARD SECTION
+   ============================================================ */
+.cc-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,4vw,48px);align-items:start;}
+@media (max-width:900px){ .cc-layout{grid-template-columns:1fr;} }
+
+/* Form fields */
+.field{margin-bottom:18px;}
+.field label{
+  display:block;font-size:.76rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;
+}
+.field input,.field select{
+  width:100%;padding:15px 16px;
+  background:rgba(0,0,0,.3);
+  border:1px solid var(--border-2);border-radius:14px;
+  color:var(--cream);
+  transition:border-color .25s ease,background .25s ease,box-shadow .25s ease;
+}
+.field input::placeholder{color:var(--text-dim);}
+.field input:focus,.field select:focus{
+  outline:none;border-color:var(--violet-lt);
+  background:rgba(0,0,0,.45);
+  box-shadow:0 0 0 4px rgba(124,58,237,.22);
+}
+.field select{
+  appearance:none;-webkit-appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23B9B4CC' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center;
+  padding-right:46px;
+}
+.field select option{background:#17142e;color:var(--cream);}
+.field .err{
+  display:none;font-size:.8rem;color:#FCA5A5;margin-top:7px;font-weight:500;
+}
+.field.invalid input,.field.invalid select{border-color:#F87171;box-shadow:0 0 0 4px rgba(248,113,113,.18);}
+.field.invalid .err{display:block;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:560px){ .field-row{grid-template-columns:1fr;} }
+
+/* Phone input with +91 prefix */
+.phone-wrap{display:flex;align-items:stretch;}
+.phone-wrap .cc{
+  display:grid;place-items:center;padding:0 14px;
+  background:rgba(255,255,255,.07);
+  border:1px solid var(--border-2);border-right:0;
+  border-radius:14px 0 0 14px;
+  font-weight:700;font-size:.95rem;color:var(--text-soft);
+  white-space:nowrap;
+}
+.phone-wrap input{border-radius:0 14px 14px 0;}
+
+/* Card preview */
+.cc-preview{
+  position:sticky;top:96px;
+  display:flex;flex-direction:column;align-items:center;gap:18px;
+}
+@media (max-width:900px){ .cc-preview{position:static;} }
+.cc-canvas-shell{
+  width:100%;max-width:330px;
+  border-radius:24px;overflow:hidden;
+  background:#120F2B;
+  border:1px solid var(--border-2);
+  box-shadow:0 30px 70px -24px rgba(124,58,237,.75);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1);
+}
+.cc-canvas-shell:hover{transform:translateY(-6px) rotate(-1deg);}
+#creatorCard{width:100%;height:auto;display:block;}
+.cc-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;width:100%;max-width:330px;}
+.cc-actions .btn{flex:1 1 130px;padding:14px 16px;font-size:.88rem;white-space:nowrap;}
+
+/* Soft CTA shown after card generation */
+.cc-after{
+  display:none;margin-top:22px;
+  padding:22px;border-radius:var(--radius);
+  background:linear-gradient(135deg,rgba(180,244,97,.1),rgba(124,58,237,.12));
+  border:1px solid rgba(180,244,97,.26);
+  text-align:center;
+}
+.cc-after.show{display:block;animation:popIn .5s cubic-bezier(.2,.9,.3,1.2);}
+.cc-after p{font-size:.95rem;color:var(--text);margin-bottom:14px;}
+.cc-after strong{color:var(--lime);}
+@keyframes popIn{from{opacity:0;transform:translateY(14px) scale(.96);}to{opacity:1;transform:none;}}
+
+/* ============================================================
+   13. SPIN THE WHEEL
+   ============================================================ */
+.wheel-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,54px);align-items:center;}
+@media (max-width:900px){ .wheel-layout{grid-template-columns:1fr;} }
+
+.wheel-stage{position:relative;display:flex;flex-direction:column;align-items:center;}
+.wheel-outer{
+  position:relative;width:100%;max-width:360px;aspect-ratio:1;
+  display:grid;place-items:center;
+}
+/* Glowing ring around the wheel */
+.wheel-ring{
+  position:absolute;inset:-10px;border-radius:50%;
+  background:conic-gradient(from 0deg,var(--violet),var(--magenta),var(--lime),var(--cyan),var(--violet));
+  filter:blur(14px);opacity:.55;
+  animation:spinRing 12s linear infinite;
+}
+@keyframes spinRing{to{transform:rotate(360deg);}}
+
+#wheelCanvas{
+  position:relative;z-index:2;width:100%;height:auto;border-radius:50%;
+  box-shadow:0 20px 60px -16px rgba(0,0,0,.8),inset 0 0 0 1px rgba(255,255,255,.14);
+  /* rotation is driven by JS transform */
+  transform:rotate(0deg);
+}
+/* Pointer at top */
+.wheel-pointer{
+  position:absolute;top:-6px;left:50%;transform:translateX(-50%);
+  z-index:4;width:0;height:0;
+  border-left:15px solid transparent;border-right:15px solid transparent;
+  border-top:26px solid var(--lime);
+  filter:drop-shadow(0 3px 8px rgba(0,0,0,.6));
+}
+/* Centre hub */
+.wheel-hub{
+  position:absolute;z-index:3;
+  width:21%;aspect-ratio:1;border-radius:50%;
+  display:grid;place-items:center;
+  background:linear-gradient(145deg,#1A1636,#0B0A1F);
+  border:2px solid rgba(255,255,255,.18);
+  box-shadow:0 8px 24px rgba(0,0,0,.65);
+  font-family:'Montserrat',sans-serif;font-weight:900;
+  font-size:clamp(.6rem,2.4vw,.78rem);color:var(--cream);
+  letter-spacing:-.01em;text-align:center;line-height:1.1;
+}
+.wheel-cta{margin-top:26px;width:100%;max-width:330px;}
+.wheel-cta .btn[disabled]{opacity:.45;pointer-events:none;}
+.wheel-hint{font-size:.82rem;color:var(--text-dim);text-align:center;margin-top:12px;}
+
+/* Confetti canvas overlay */
+#confettiCanvas{
+  position:fixed;inset:0;z-index:200;pointer-events:none;
+  width:100%;height:100%;display:none;
+}
+
+/* Win panel + claim form */
+.wheel-panel .win-badge{
+  display:none;align-items:center;gap:14px;
+  padding:18px;border-radius:var(--radius);margin-bottom:22px;
+  background:linear-gradient(135deg,rgba(180,244,97,.16),rgba(124,58,237,.14));
+  border:1px solid rgba(180,244,97,.4);
+}
+.wheel-panel .win-badge.show{display:flex;animation:popIn .55s cubic-bezier(.2,.9,.3,1.2);}
+.win-badge .ico{font-size:1.9rem;flex:0 0 auto;}
+.win-badge .txt small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);font-weight:800;margin-bottom:3px;}
+.win-badge .txt strong{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.05rem,3.6vw,1.3rem);color:var(--cream);letter-spacing:-.02em;}
+
+.claim-box{display:none;}
+.claim-box.show{display:block;}
+.bonus-list{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:10px;}
+.bonus-list li{
+  display:flex;align-items:center;gap:11px;
+  font-size:.92rem;color:var(--text-soft);
+  padding:12px 15px;border-radius:12px;
+  background:rgba(255,255,255,.04);border:1px solid var(--border);
+}
+.bonus-list li .bi{font-size:1.1rem;}
+
+/* Success state after claim */
+.claim-done{
+  display:none;padding:22px;border-radius:var(--radius);
+  background:rgba(180,244,97,.1);border:1px solid rgba(180,244,97,.35);
+  text-align:center;
+}
+.claim-done.show{display:block;animation:popIn .5s cubic-bezier(.2,.9,.3,1.2);}
+.claim-done h3{color:var(--lime);font-size:1.2rem;margin-bottom:8px;}
+.claim-done p{font-size:.93rem;color:var(--text-soft);margin:0;}
+
+/* ============================================================
+   14. WORKSHOP
+   ============================================================ */
+.workshop-box{
+  display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(24px,4vw,46px);
+  padding:clamp(26px,5vw,52px);
+  border-radius:var(--radius-lg);
+  background:linear-gradient(135deg,rgba(59,130,246,.14),rgba(124,58,237,.14));
+  border:1px solid var(--border-2);
+  backdrop-filter:blur(16px);
+  align-items:center;
+}
+@media (max-width:860px){ .workshop-box{grid-template-columns:1fr;} }
+.workshop-meta{display:grid;gap:12px;margin:22px 0 0;}
+.workshop-meta div{display:flex;align-items:center;gap:11px;font-size:.93rem;color:var(--text-soft);}
+.workshop-meta .k{font-weight:700;color:var(--cream);}
+/* Placeholder styling so unfilled values are obvious while editing */
+.ph{
+  background:rgba(236,72,153,.16);border:1px dashed rgba(236,72,153,.5);
+  border-radius:6px;padding:2px 8px;font-weight:600;color:#FBCFE8;font-size:.88em;
+}
+
+/* ============================================================
+   15. INSTRUCTOR
+   ============================================================ */
+.inst-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,4vw,52px);align-items:center;}
+@media (max-width:860px){ .inst-layout{grid-template-columns:1fr;} }
+.inst-photo{
+  position:relative;border-radius:var(--radius-lg);overflow:hidden;
+  aspect-ratio:4/5;
+  background:linear-gradient(145deg,rgba(124,58,237,.3),rgba(236,72,153,.22));
+  border:1px solid var(--border-2);
+  display:grid;place-items:center;text-align:center;padding:26px;
+}
+.inst-photo .ph-note{font-size:.85rem;color:var(--text-soft);}
+.inst-photo img{width:100%;height:100%;object-fit:cover;}
+.inst-name{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.6rem,5vw,2.3rem);color:var(--cream);letter-spacing:-.025em;margin-bottom:4px;}
+.inst-role{color:var(--violet-lt);font-weight:600;font-size:.95rem;margin-bottom:20px;}
+.inst-bio p{color:var(--text-soft);font-size:.97rem;}
+.inst-wins{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:11px;}
+.inst-wins li{display:flex;gap:11px;align-items:flex-start;font-size:.94rem;color:var(--text);}
+.inst-wins .tick{color:var(--lime);font-weight:900;flex:0 0 auto;}
+
+/* ============================================================
+   16. SOCIAL PROOF
+   ============================================================ */
+.testi{display:flex;flex-direction:column;}
+.testi .stars{color:var(--lime);letter-spacing:3px;margin-bottom:14px;font-size:.95rem;}
+.testi blockquote{margin:0 0 18px;font-size:.98rem;color:var(--text);line-height:1.6;}
+.testi .who{display:flex;align-items:center;gap:12px;margin-top:auto;}
+.testi .av{
+  width:44px;height:44px;border-radius:50%;flex:0 0 auto;
+  background:var(--grad-primary);display:grid;place-items:center;
+  font-family:'Montserrat',sans-serif;font-weight:900;font-size:.95rem;color:#fff;
+}
+.testi .who .nm{font-weight:700;font-size:.92rem;color:var(--cream);line-height:1.3;}
+.testi .who .mt{font-size:.78rem;color:var(--text-dim);}
+
+/* Placeholder card variant — visibly marked as TO FILL */
+.placeholder-card{
+  border-style:dashed;border-color:rgba(236,72,153,.4);
+  background:rgba(236,72,153,.05);
+}
+.placeholder-tag{
+  position:absolute;top:0;right:0;
+  font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  padding:5px 11px;border-radius:0 var(--radius) 0 12px;
+  background:rgba(236,72,153,.3);color:#FBCFE8;
+}
+
+/* ============================================================
+   17. PRICING
+   ============================================================ */
+.price-card{
+  max-width:620px;margin:0 auto;
+  padding:clamp(28px,5.5vw,48px);
+  border-radius:var(--radius-lg);
+  background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+  border:1px solid rgba(180,244,97,.3);
+  backdrop-filter:blur(18px);
+  box-shadow:0 40px 90px -36px rgba(180,244,97,.3),0 0 0 1px rgba(255,255,255,.04) inset;
+  position:relative;overflow:hidden;
+}
+.price-card::after{
+  content:"";position:absolute;top:-40%;left:-20%;width:140%;height:80%;
+  background:radial-gradient(ellipse,rgba(180,244,97,.14),transparent 65%);
+  pointer-events:none;
+}
+.price-head{text-align:center;margin-bottom:28px;position:relative;}
+.price-head h3{font-size:clamp(1.3rem,4.4vw,1.75rem);margin-bottom:6px;}
+.price-head .sub{color:var(--text-soft);font-size:.94rem;margin:0;}
+.price-amount{display:flex;align-items:baseline;justify-content:center;gap:12px;margin:20px 0 6px;}
+.price-amount .now{
+  font-family:'Montserrat',sans-serif;font-weight:900;
+  font-size:clamp(3rem,13vw,4.75rem);line-height:1;letter-spacing:-.04em;
+  background:var(--grad-lime);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.price-amount .was{font-size:clamp(1.1rem,4vw,1.5rem);color:var(--text-dim);text-decoration:line-through;font-weight:600;}
+.price-meta{text-align:center;font-size:.85rem;color:var(--text-dim);margin-bottom:28px;}
+
+.incl{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:12px;}
+.incl li{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;color:var(--text);}
+.incl .tick{
+  width:21px;height:21px;flex:0 0 auto;border-radius:50%;margin-top:2px;
+  display:grid;place-items:center;font-size:.68rem;font-weight:900;
+  background:rgba(180,244,97,.2);color:var(--lime);border:1px solid rgba(180,244,97,.4);
+}
+.incl li.bonus-row{color:var(--text-soft);}
+/* The wheel-won bonus, injected by JS */
+.incl li.won-row{
+  padding:13px 15px;border-radius:12px;
+  background:rgba(180,244,97,.12);border:1px solid rgba(180,244,97,.4);
+  color:var(--cream);font-weight:600;
+}
+.incl li.won-row .tick{background:var(--lime);color:#0A1403;border-color:var(--lime);}
+.won-flag{
+  display:inline-block;font-size:.62rem;font-weight:800;letter-spacing:.1em;
+  text-transform:uppercase;color:#0A1403;background:var(--lime);
+  padding:3px 8px;border-radius:5px;margin-left:8px;vertical-align:middle;
+}
+.price-foot{text-align:center;margin-top:18px;font-size:.83rem;color:var(--text-dim);}
+.price-foot .pay-icons{margin-top:10px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.price-foot .pay-icons span{
+  font-size:.72rem;font-weight:600;padding:5px 11px;border-radius:7px;
+  background:rgba(255,255,255,.06);border:1px solid var(--border);color:var(--text-soft);
+}
+
+/* ============================================================
+   18. FAQ
+   ============================================================ */
+.faq-list{max-width:820px;margin:0 auto;display:grid;gap:12px;}
+.faq-item{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:16px;backdrop-filter:blur(12px);overflow:hidden;
+  transition:border-color .3s ease,background .3s ease;
+}
+.faq-item.open{border-color:rgba(167,139,250,.4);background:var(--surface-2);}
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:19px 22px;text-align:left;
+  font-family:'Montserrat',sans-serif;font-weight:800;
+  font-size:clamp(.95rem,2.9vw,1.06rem);color:var(--cream);letter-spacing:-.01em;
+  line-height:1.4;
+}
+.faq-q .ic{
+  flex:0 0 auto;width:26px;height:26px;border-radius:50%;
+  display:grid;place-items:center;font-size:1.1rem;font-weight:700;
+  background:rgba(124,58,237,.22);border:1px solid rgba(167,139,250,.34);
+  color:var(--violet-lt);transition:transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.faq-item.open .faq-q .ic{transform:rotate(45deg);}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .4s cubic-bezier(.3,.9,.3,1);
+}
+.faq-a .inner{padding:0 22px 20px;color:var(--text-soft);font-size:.94rem;}
+.faq-a .inner p:last-child{margin-bottom:0;}
+
+/* ============================================================
+   19. FINAL CTA + STICKY BAR + FOOTER
+   ============================================================ */
+.final-box{
+  text-align:center;max-width:800px;margin:0 auto;
+  padding:clamp(34px,6.5vw,68px) clamp(22px,5vw,52px);
+  border-radius:var(--radius-lg);
+  background:linear-gradient(145deg,rgba(124,58,237,.26),rgba(236,72,153,.2));
+  border:1px solid var(--border-2);
+  backdrop-filter:blur(18px);
+  box-shadow:0 40px 100px -40px rgba(124,58,237,.8);
+}
+.final-box h2{margin-bottom:16px;}
+.final-box .btn{margin-top:10px;}
+
+/* Sticky mobile CTA bar */
+.sticky-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:120;
+  display:none;align-items:center;gap:12px;
+  padding:11px 14px calc(11px + env(safe-area-inset-bottom,0px));
+  background:rgba(11,10,31,.93);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-top:1px solid var(--border);
+  transform:translateY(110%);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.sticky-bar.up{transform:none;}
+.sticky-bar .sb-price{flex:0 0 auto;line-height:1.15;}
+.sticky-bar .sb-price .amt{
+  display:block;font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.3rem;
+  background:var(--grad-lime);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.sticky-bar .sb-price .lb{display:block;font-size:.64rem;letter-spacing:.09em;text-transform:uppercase;color:var(--text-dim);font-weight:700;}
+.sticky-bar .btn{flex:1 1 auto;padding:15px 18px;font-size:.95rem;}
+@media (max-width:860px){ .sticky-bar{display:flex;} body{padding-bottom:0;} }
+
+footer.site{
+  position:relative;z-index:10;
+  padding:clamp(40px,7vw,64px) 0 clamp(90px,14vw,56px);
+  border-top:1px solid var(--border);
+  background:rgba(0,0,0,.25);
+}
+footer.site .f-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px;}
+footer.site p{font-size:.85rem;color:var(--text-dim);max-width:46ch;}
+footer.site .f-links{display:flex;gap:22px;flex-wrap:wrap;}
+footer.site .f-links a{font-size:.85rem;color:var(--text-soft);}
+footer.site .f-links a:hover{color:var(--cream);}
+footer.site .f-base{font-size:.78rem;color:var(--text-dim);border-top:1px solid var(--border);padding-top:20px;}
+
+/* ============================================================
+   20. REDUCED MOTION / LOW-POWER
+   JS adds .low-power to <html> on weak devices.
+   ============================================================ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;scroll-behavior:auto !important;
+  }
+  .reveal{opacity:1;transform:none;}
+  .orb{animation:none;}
+  .wheel-ring{animation:none;}
+}
+html.low-power .orb{animation:none;filter:blur(70px);opacity:.42;}
+html.low-power .bg-noise{display:none;}
+html.low-power .wheel-ring{animation:none;}
+html.low-power .glass,html.low-power header.site.stuck,html.low-power .sticky-bar{
+  backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(19,17,46,.9);
+}
+html.low-power .bg-cursor{display:none;}
+
+/* Print: keep it readable if anyone prints the page */
+@media print{
+  .bg-layer,.sticky-bar,header.site{display:none !important;}
+  body{background:#fff;color:#000;}
+}
+</style>
+</head>
+<body>
+
+<a href="#modules" class="sr-only">Skip to course content</a>
+
+<!-- ============================================================
+     LIVING BACKGROUND LAYERS (fixed, behind everything)
+     ============================================================ -->
+<div class="bg-layer bg-aurora" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+</div>
+<canvas class="bg-layer" id="bgCanvas" aria-hidden="true"></canvas>
+<div class="bg-layer bg-grid" aria-hidden="true"></div>
+<div class="bg-layer bg-noise" aria-hidden="true"></div>
+<div class="bg-layer bg-cursor" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- Shared gradient used by all wave dividers -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#7C3AED" stop-opacity="0"/>
+      <stop offset="25%"  stop-color="#7C3AED"/>
+      <stop offset="55%"  stop-color="#EC4899"/>
+      <stop offset="80%"  stop-color="#B4F461"/>
+      <stop offset="100%" stop-color="#B4F461" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site" id="siteHeader">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="KK Create home">
+      <!-- EDIT: LOGO — swap this div for <img src="logo.svg" alt="KK Create"> -->
+      <div class="logo-mark" aria-hidden="true">KK</div>
+      <span class="logo-text">
+        <span class="name">KK Create</span>
+        <span class="tag">Creator Academy</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Page sections">
+      <a href="#modules">Course</a>
+      <a href="#creator-card">Creator Card</a>
+      <a href="#wheel">Bonuses</a>
+      <a href="#instructor">Instructor</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#pricing" class="btn btn-primary" data-cta="header">Join for ₹999</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================================================
+     1. HERO
+     EDIT: HERO COPY
+     ============================================================ -->
+<section class="band hero glow-hero">
+  <div class="wrap">
+    <div class="hero-badges reveal">
+      <span class="pill"><span class="tick">✓</span> Zero experience needed</span>
+      <span class="pill"><span class="tick">✓</span> Phone se bhi ho jayega</span>
+      <span class="pill"><span class="tick">✓</span> Lifetime access</span>
+    </div>
+
+    <h1 class="reveal d1">
+      <span class="line">Content banane ka</span>
+      <span class="line grad-text">plan, zero se.</span>
+    </h1>
+
+    <p class="lead reveal d2">
+      Niche kya hogi, ideas kahan se aayenge, algorithm kaise kaam karta hai, thumbnail
+      kaise banega — sab kuch step by step. <strong style="color:var(--cream)">KK Create Creator Academy</strong>
+      ek recorded course hai jo aapko complete beginner se consistent creator tak le jaata hai.
+    </p>
+
+    <div class="hero-ctas reveal d3">
+      <a href="#pricing" class="btn btn-primary btn-lg" data-cta="hero-primary">
+        Join for ₹999 <span aria-hidden="true">→</span>
+      </a>
+      <a href="#workshop" class="btn btn-ghost btn-lg" data-cta="hero-workshop">
+        Free Workshop ke liye register karein
+      </a>
+    </div>
+
+    <p class="hero-note reveal d4">
+      <span>🔒 One-time payment</span> <span aria-hidden="true">·</span>
+      <span>📱 Mobile par poora course</span> <span aria-hidden="true">·</span>
+      <span>🎁 Spin karke bonus unlock karein</span>
+    </p>
+
+    <!-- Trust counters — count-up driven by JS -->
+    <div class="stats reveal d5">
+      <div class="stat hero-stat">
+        <span class="num" data-count="5.58" data-decimals="2" data-suffix="M">0M</span>
+        <span class="lbl">YouTube Subscribers</span>
+      </div>
+      <div class="stat">
+        <span class="num" data-count="10" data-suffix="+">0+</span>
+        <span class="lbl">Core Modules</span>
+      </div>
+      <div class="stat">
+        <span class="num" data-count="6" data-suffix="+">0+</span>
+        <span class="lbl">Years of Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path class="fill" d="M0,42 C240,88 480,2 720,30 C960,58 1200,8 1440,44 L1440,90 L0,90 Z"/>
+    <path class="line" d="M0,42 C240,88 480,2 720,30 C960,58 1200,8 1440,44"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     2. PAIN POINTS
+     EDIT: PAIN POINTS
+     ============================================================ -->
+<section class="band glow-pain">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(32px,6vw,56px)">
+      <span class="eyebrow reveal"><span class="dot"></span> The real problem</span>
+      <h2 class="reveal d1">Content banana hai<br><span class="grad-text">par shuru kahan se karein?</span></h2>
+      <p class="lead reveal d2">
+        Agar aapko ye sab relatable lagta hai, to aap akele nahi hain. Har creator yahin se shuru hota hai.
+      </p>
+    </div>
+
+    <div class="grid g-3">
+      <article class="glass pain-card reveal">
+        <div class="chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </div>
+        <h3>"Meri niche kya hogi?"</h3>
+        <p>Har topic interesting lagta hai, par decide nahi hota. Result — ek bhi video post nahi hoti.</p>
+      </article>
+
+      <article class="glass pain-card reveal d1">
+        <div class="chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 00-4 12.7V17h8v-2.3A7 7 0 0012 2z"/></svg>
+        </div>
+        <h3>"Ideas khatam ho jaate hain"</h3>
+        <p>Do-teen video ke baad dimaag blank. Har baar naya idea dhoondhna ek struggle ban jaata hai.</p>
+      </article>
+
+      <article class="glass pain-card reveal d2">
+        <div class="chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </div>
+        <h3>"Time hi nahi milta"</h3>
+        <p>College, job, padhai — sab ke beech shoot aur edit ka time nikalna impossible lagta hai.</p>
+      </article>
+
+      <article class="glass pain-card reveal d3">
+        <div class="chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 4 3-4 6 6"/><circle cx="7" cy="7" r="2"/></svg>
+        </div>
+        <h3>"Algorithm samajh nahi aata"</h3>
+        <p>Kabhi 100 views, kabhi 10,000. Kyun chala kyun nahi chala — iska koi clarity nahi.</p>
+      </article>
+
+      <article class="glass pain-card reveal d4">
+        <div class="chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M10 9.5l5 2.5-5 2.5z"/></svg>
+        </div>
+        <h3>"Thumbnail click hi nahi hota"</h3>
+        <p>Video acchi hai par CTR dead. Thumbnail aur title ka game kabhi sikhaya hi nahi gaya.</p>
+      </article>
+
+      <article class="glass pain-card reveal d5">
+        <div class="chip" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 6.5c0-2-2.2-3.5-5-3.5S7 4.5 7 6.5s2.2 3 5 3.5 5 1.5 5 3.5-2.2 3.5-5 3.5-5-1.5-5-3.5"/></svg>
+        </div>
+        <h3>"Paise kaise banenge?"</h3>
+        <p>Monetization, brand deals, affiliate — sab suna hai, par actual process kisi ne nahi bataya.</p>
+      </article>
+    </div>
+
+    <div class="pain-bridge reveal d2">
+      <p>Problem talent ki nahi hai. Problem ek clear, sahi order wale roadmap ki hai. 👇</p>
+    </div>
+  </div>
+</section>
+
+<div class="wave flip" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path class="fill" d="M0,50 C200,10 420,80 720,46 C1020,12 1240,78 1440,38 L1440,90 L0,90 Z"/>
+    <path class="line" d="M0,50 C200,10 420,80 720,46 C1020,12 1240,78 1440,38"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     3. WHAT YOU WILL LEARN
+     EDIT: MODULES — add/remove <article class="glass module"> blocks freely
+     ============================================================ -->
+<section class="band glow-modules" id="modules">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(32px,6vw,56px)">
+      <span class="eyebrow reveal"><span class="dot"></span> The curriculum</span>
+      <h2 class="reveal d1">Aap exactly <span class="grad-text">kya seekhenge</span></h2>
+      <p class="lead reveal d2">
+        Har module ek clear outcome deta hai. Theory kam, actual karne wala kaam zyada.
+      </p>
+    </div>
+
+    <div class="grid g-3">
+      <article class="glass module reveal">
+        <div class="mod-top"><span class="mod-no" aria-hidden="true">01</span><h3>Content Creation for Beginners</h3></div>
+        <p>Bilkul zero se shuruaat. Creator economy kaise chalti hai, kaun sa format aapke liye sahi hai, aur pehli video tak pahunchne ka seedha raasta.</p>
+        <div class="mod-tags"><span>Foundations</span><span>Mindset</span><span>First video</span></div>
+      </article>
+
+      <article class="glass module reveal d1">
+        <div class="mod-top"><span class="mod-no" aria-hidden="true">02</span><h3>Finding Your Niche</h3></div>
+        <p>Interest, skill aur demand ka overlap nikaalna. Ek practical framework jisse aap ek baar mein niche lock kar paayein — guesswork band.</p>
+        <div class="mod-tags"><span>Positioning</span><span>Audience</span><span>Framework</span></div>
+      </article>
+
+      <article class="glass module reveal d2">
+        <div class="mod-top"><span class="mod-no" aria-hidden="true">03</span><h3>YouTube 101</h3></div>
+        <p>Channel setup, naming, playlists, description, tags, Shorts vs long-form — pehle din se professional dikhne wala channel.</p>
+        <div class="mod-tags"><span>Setup</span><span>Channel SEO</span><span>Shorts</span></div>
+      </article>
+
+      <article class="glass module reveal d3">
+        <div class="mod-top"><span class="mod-no" aria-hidden="true">04</span><h3>How the Algorithm Works</h3></div>
+        <p>CTR, watch time, impressions aur retention ka asli matlab. Algorithm ko "hack" nahi — samajh kar use karna seekhiye.</p>
+        <div class="mod-tags"><span>CTR</span><span>Retention</span><span>Analytics</span></div>
+      </article>
+
+      <article class="glass module reveal d4">
+        <div class="mod-top"><span class="mod-no" aria-hidden="true">05</span><h3>Creative Idea Generation</h3></div>
+        <p>Ek repeatable idea system — swipe files, hooks, trend-spotting aur title-first thinking. Dimaag blank hone ka problem solve.</p>
+        <div class="mod-tags"><span>Ideation</span><span>Hooks</span><span>Research</span></div>
+      </article>
+
+      <article class="glass module reveal d5">
+        <div class="mod-top"><span class="mod-no" aria-hidden="true">06</span><h3>Time Management for YouTube</h3></div>
+        <p>Batch shooting, content calendar aur realistic upload schedule — padhai ya job ke saath consistent rehne ka system.</p>
+        <div class="mod-tags"><span>Batching</span><span>Calendar</span><span>Consistency</span></div>
+      </article>
+
+      <article class="glass module reveal">
+        <div class="mod-top"><span class="mod-no" aria-hidden="true">07</span><h3>Thumbnails &amp; Banners</h3></div>
+        <p>Click-worthy thumbnail ka design logic — contrast, face, text hierarchy. Plus free tools se channel banner banana.</p>
+        <div class="mod-tags"><span>Design</span><span>CTR</span><span>Free tools</span></div>
+      </article>
+
+      <article class="glass module reveal d1">
+        <div class="mod-top"><span class="mod-no" aria-hidden="true">08</span><h3>Editing 101</h3></div>
+        <p>Editing ke basic principles — pacing, cuts, b-roll, sound aur captions. Phone ya laptop, dono par apply hota hai.</p>
+        <div class="mod-tags"><span>Pacing</span><span>Cuts</span><span>Sound</span></div>
+      </article>
+
+      <article class="glass module reveal d2">
+        <div class="mod-top"><span class="mod-no" aria-hidden="true">09</span><h3>AI for Content Creation</h3></div>
+        <p>Scripting, research, thumbnail ideas aur repurposing mein AI ka smart use — kaam ka time aadha, quality upar.</p>
+        <div class="mod-tags"><span>Scripting</span><span>Workflow</span><span>Repurposing</span></div>
+      </article>
+
+      <article class="glass module reveal d3">
+        <div class="mod-top"><span class="mod-no" aria-hidden="true">10</span><h3>Learn to Earn</h3></div>
+        <p>Monetization ke raaste — AdSense requirements, brand deals ka pitch, affiliate aur apna product. Pehli earning tak ka clear path.</p>
+        <div class="mod-tags"><span>AdSense</span><span>Brand deals</span><span>Pitching</span></div>
+      </article>
+    </div>
+
+    <div class="center" style="margin-top:clamp(30px,5vw,48px)">
+      <a href="#pricing" class="btn btn-primary btn-lg reveal" data-cta="modules">Poora course ₹999 mein <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="wave" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path class="fill" d="M0,36 C300,78 560,4 860,34 C1120,60 1280,16 1440,48 L1440,90 L0,90 Z"/>
+    <path class="line" d="M0,36 C300,78 560,4 860,34 C1120,60 1280,16 1440,48"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     4. MY CREATOR CARD  (interactive #1)
+     ============================================================ -->
+<section class="band glow-card" id="creator-card">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(32px,6vw,52px)">
+      <span class="eyebrow reveal"><span class="dot"></span> Free &amp; fun</span>
+      <h2 class="reveal d1">Banaiye apna <span class="grad-text">Creator Card</span></h2>
+      <p class="lead reveal d2">
+        Naam likhiye, niche aur goal choose kijiye — aapka personal creator card turant ban jayega.
+        Download karke Instagram story par share kijiye. Koi signup nahi, bilkul free.
+      </p>
+    </div>
+
+    <div class="cc-layout">
+      <!-- Left: the form -->
+      <div class="glass reveal" style="padding:clamp(22px,4vw,34px)">
+        <form id="ccForm" novalidate>
+          <div class="field">
+            <label for="ccName">Aapka naam</label>
+            <input type="text" id="ccName" name="name" placeholder="e.g. Aarav Sharma"
+                   autocomplete="name" maxlength="22" required>
+            <span class="err" id="ccNameErr">Please apna naam likhiye (kam se kam 2 letters).</span>
+          </div>
+
+          <div class="field">
+            <label for="ccNiche">Aapki niche</label>
+            <!-- EDIT: NICHE OPTIONS -->
+            <select id="ccNiche" name="niche" required>
+              <option value="">Choose karein…</option>
+              <option>Tech &amp; Gadgets</option>
+              <option>Gaming</option>
+              <option>Comedy &amp; Skits</option>
+              <option>Food &amp; Cooking</option>
+              <option>Fitness &amp; Health</option>
+              <option>Finance &amp; Money</option>
+              <option>Education &amp; Study</option>
+              <option>Beauty &amp; Fashion</option>
+              <option>Travel &amp; Vlogs</option>
+              <option>Music &amp; Dance</option>
+              <option>Art &amp; Design</option>
+              <option>Motivation &amp; Self-help</option>
+              <option>Still deciding</option>
+            </select>
+            <span class="err" id="ccNicheErr">Ek niche choose kijiye.</span>
+          </div>
+
+          <div class="field">
+            <label for="ccGoal">Aapka goal</label>
+            <!-- EDIT: GOAL OPTIONS -->
+            <select id="ccGoal" name="goal" required>
+              <option value="">Choose karein…</option>
+              <option>First 1,000 subscribers</option>
+              <option>Channel monetize karna</option>
+              <option>Full-time creator banna</option>
+              <option>10K followers in 90 days</option>
+              <option>Personal brand build karna</option>
+              <option>Consistently post karna</option>
+            </select>
+            <span class="err" id="ccGoalErr">Ek goal choose kijiye.</span>
+          </div>
+
+          <button type="submit" class="btn btn-grad btn-block" data-cta="creator-card">
+            Generate my card <span aria-hidden="true">✨</span>
+          </button>
+          <p style="font-size:.8rem;color:var(--text-dim);margin:14px 0 0;text-align:center">
+            Card aapke browser mein hi banta hai — koi data store nahi hota.
+          </p>
+        </form>
+
+        <!-- Soft CTA after the card is generated -->
+        <div class="cc-after" id="ccAfter">
+          <p>
+            Card ban gaya 🎉 Ab iske peeche ka <strong>actual plan</strong> bhi le lijiye —
+            niche se lekar earning tak, poora roadmap course mein hai.
+          </p>
+          <a href="#pricing" class="btn btn-primary btn-block" data-cta="creator-card-after">
+            Course join karein — ₹999
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: live canvas preview -->
+      <div class="cc-preview reveal d2">
+        <div class="cc-canvas-shell">
+          <!-- 1080 x 1350 canvas, scaled down by CSS -->
+          <canvas id="creatorCard" width="1080" height="1350"
+                  role="img"
+                  aria-label="Your generated creator card preview showing your name, niche and goal"></canvas>
+        </div>
+        <div class="cc-actions">
+          <button type="button" class="btn btn-primary" id="ccDownload" data-cta="card-download">
+            <span aria-hidden="true">⬇</span> Download
+          </button>
+          <button type="button" class="btn btn-ghost" id="ccShare" data-cta="card-share">
+            <span aria-hidden="true">↗</span> Share
+          </button>
+        </div>
+        <p style="font-size:.78rem;color:var(--text-dim);text-align:center;margin:0">
+          Tip: download karke Instagram story par <strong style="color:var(--text-soft)">@kkcreate</strong> ko tag kijiye.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave flip" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path class="fill" d="M0,46 C260,6 520,82 780,44 C1040,8 1240,70 1440,36 L1440,90 L0,90 Z"/>
+    <path class="line" d="M0,46 C260,6 520,82 780,44 C1040,8 1240,70 1440,36"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     5. SPIN THE WHEEL  (interactive #2)
+     EDIT: BONUSES — edit the BONUSES array in the JS CONFIG block
+     ============================================================ -->
+<section class="band glow-wheel" id="wheel">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(32px,6vw,52px)">
+      <span class="eyebrow reveal"><span class="dot"></span> Guaranteed bonus</span>
+      <h2 class="reveal d1">Spin kijiye, <span class="grad-text">bonus pakka hai</span></h2>
+      <p class="lead reveal d2">
+        6 real bonuses, har spin par ek milta hai. Koi "better luck next time" nahi —
+        jo bhi aaye, woh aapka course ke saath free.
+      </p>
+    </div>
+
+    <div class="wheel-layout">
+      <!-- Left: the wheel -->
+      <div class="wheel-stage reveal">
+        <div class="wheel-outer">
+          <div class="wheel-ring" aria-hidden="true"></div>
+          <div class="wheel-pointer" aria-hidden="true"></div>
+          <canvas id="wheelCanvas" width="760" height="760"
+                  role="img" aria-label="Bonus wheel with six prize segments"></canvas>
+          <div class="wheel-hub" aria-hidden="true">KK<br>CREATE</div>
+        </div>
+        <div class="wheel-cta">
+          <button type="button" class="btn btn-primary btn-block btn-lg" id="spinBtn" data-cta="spin">
+            SPIN THE WHEEL <span aria-hidden="true">🎯</span>
+          </button>
+          <p class="wheel-hint" id="wheelHint">Ek hi spin — aur jeet guaranteed hai.</p>
+        </div>
+        <!-- Live region so screen readers hear the result -->
+        <p class="sr-only" role="status" aria-live="polite" id="wheelStatus"></p>
+      </div>
+
+      <!-- Right: bonus list → win badge → claim form -->
+      <div class="wheel-panel reveal d2">
+        <div class="win-badge" id="winBadge">
+          <span class="ico" id="winIcon" aria-hidden="true">🎁</span>
+          <span class="txt">
+            <small>You won</small>
+            <strong id="winName">—</strong>
+          </span>
+        </div>
+
+        <!-- Shown before spinning -->
+        <div class="glass" id="bonusPreview" style="padding:clamp(22px,4vw,30px)">
+          <h3 style="font-size:1.1rem;margin-bottom:16px">Wheel par ye 6 bonuses hain</h3>
+          <ul class="bonus-list" id="bonusListEl"><!-- filled by JS --></ul>
+          <p style="font-size:.85rem;color:var(--text-dim);margin:0">
+            Bonus ka delivery course purchase ke baad email/WhatsApp par hota hai.
+          </p>
+        </div>
+
+        <!-- Claim form, revealed after the spin -->
+        <div class="glass claim-box" id="claimBox" style="padding:clamp(22px,4vw,30px)">
+          <h3 style="font-size:1.1rem;margin-bottom:6px">Bonus claim kijiye</h3>
+          <p style="font-size:.9rem;color:var(--text-soft);margin-bottom:20px">
+            Naam aur WhatsApp number dijiye — bonus aur free workshop ki details wahin bhej denge.
+          </p>
+          <form id="claimForm" novalidate>
+            <div class="field">
+              <label for="clName">Naam</label>
+              <input type="text" id="clName" name="name" placeholder="Aapka naam"
+                     autocomplete="name" maxlength="40" required>
+              <span class="err" id="clNameErr">Please apna naam likhiye.</span>
+            </div>
+            <div class="field">
+              <label for="clPhone">WhatsApp number</label>
+              <div class="phone-wrap">
+                <span class="cc" aria-hidden="true">+91</span>
+                <input type="tel" id="clPhone" name="phone" placeholder="98765 43210"
+                       inputmode="numeric" autocomplete="tel-national" maxlength="11" required
+                       aria-describedby="clPhoneErr">
+              </div>
+              <span class="err" id="clPhoneErr">10-digit Indian mobile number daaliye (6-9 se shuru).</span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="claimSubmit" data-cta="claim-bonus">
+              Claim my bonus
+            </button>
+            <p style="font-size:.78rem;color:var(--text-dim);margin:13px 0 0;text-align:center">
+              Hum sirf course aur workshop se related message bhejte hain. Kabhi spam nahi.
+            </p>
+          </form>
+        </div>
+
+        <!-- Post-claim success -->
+        <div class="claim-done" id="claimDone">
+          <h3>Bonus locked in ✅</h3>
+          <p id="claimDoneMsg">Aapka bonus reserve ho gaya hai. Pricing section mein "included for you" dikh raha hai — neeche dekhiye.</p>
+          <a href="#pricing" class="btn btn-primary btn-block" style="margin-top:16px" data-cta="claim-to-pricing">
+            Pricing dekhein
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path class="fill" d="M0,40 C240,84 500,8 760,38 C1020,66 1260,12 1440,42 L1440,90 L0,90 Z"/>
+    <path class="line" d="M0,40 C240,84 500,8 760,38 C1020,66 1260,12 1440,42"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     6. FREE WORKSHOP  (lead capture #2)
+     EDIT: WORKSHOP DATE — set CONFIG.WORKSHOP_DATE / WORKSHOP_TIME in the JS
+     ============================================================ -->
+<section class="band glow-workshop" id="workshop">
+  <div class="wrap">
+    <div class="workshop-box reveal">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Free, live session</span>
+        <h2 style="font-size:clamp(1.7rem,5.6vw,2.7rem)">Pehle free workshop <span class="grad-text">try kijiye</span></h2>
+        <p style="color:var(--text-soft);font-size:1rem">
+          Abhi buy karne ka mann nahi? Bilkul theek. Free workshop join kijiye —
+          content creation ke basics aur ek live Q&amp;A. Uske baad decide kijiye.
+        </p>
+        <div class="workshop-meta">
+          <div><span class="k">📅 Date:</span> <span class="ph" id="whDate">[WORKSHOP DATE]</span></div>
+          <div><span class="k">⏰ Time:</span> <span class="ph" id="whTime">[WORKSHOP TIME]</span></div>
+          <div><span class="k">📍 Where:</span> Online — link WhatsApp par milega</div>
+          <div><span class="k">💰 Fees:</span> Bilkul free</div>
+        </div>
+      </div>
+
+      <div class="glass" style="padding:clamp(22px,4vw,30px)">
+        <h3 style="font-size:1.1rem;margin-bottom:18px">Register karein</h3>
+        <form id="workshopForm" novalidate>
+          <div class="field">
+            <label for="wsName">Naam</label>
+            <input type="text" id="wsName" name="name" placeholder="Aapka naam"
+                   autocomplete="name" maxlength="40" required>
+            <span class="err" id="wsNameErr">Please apna naam likhiye.</span>
+          </div>
+          <div class="field">
+            <label for="wsPhone">WhatsApp number</label>
+            <div class="phone-wrap">
+              <span class="cc" aria-hidden="true">+91</span>
+              <input type="tel" id="wsPhone" name="phone" placeholder="98765 43210"
+                     inputmode="numeric" autocomplete="tel-national" maxlength="11" required>
+            </div>
+            <span class="err" id="wsPhoneErr">10-digit Indian mobile number daaliye (6-9 se shuru).</span>
+          </div>
+          <button type="submit" class="btn btn-grad btn-block" id="wsSubmit" data-cta="workshop-register">
+            Reserve my free seat
+          </button>
+          <p class="sr-only" role="status" aria-live="polite" id="wsStatus"></p>
+          <p style="font-size:.78rem;color:var(--text-dim);margin:13px 0 0;text-align:center">
+            Registration confirm hone par WhatsApp par joining link bhej denge.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave flip" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path class="fill" d="M0,52 C220,12 480,76 740,42 C1000,8 1230,74 1440,40 L1440,90 L0,90 Z"/>
+    <path class="line" d="M0,52 C220,12 480,76 740,42 C1000,8 1230,74 1440,40"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     7. INSTRUCTOR / ABOUT KK CREATE
+     EDIT: INSTRUCTOR
+     ============================================================ -->
+<section class="band glow-instructor" id="instructor">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(32px,6vw,52px)">
+      <span class="eyebrow reveal"><span class="dot"></span> Who's teaching</span>
+      <h2 class="reveal d1">Aapko sikhayenge <span class="grad-text">Varun</span></h2>
+    </div>
+
+    <div class="inst-layout">
+      <!-- EDIT: INSTRUCTOR PHOTO — replace this placeholder div with:
+           <div class="inst-photo"><img src="varun.jpg" alt="Varun, course instructor at KK Create"></div> -->
+      <div class="inst-photo reveal">
+        <span class="placeholder-tag">Add photo</span>
+        <span class="ph-note">[INSTRUCTOR PHOTO — 4:5 portrait]<br>Replace the placeholder div in the HTML</span>
+      </div>
+
+      <div class="reveal d2">
+        <p class="inst-name">Varun</p>
+        <p class="inst-role">Course Lead · KK Create · 6+ years in content</p>
+        <div class="inst-bio">
+          <p>
+            Varun ko content creation mein 6 saal se zyada ka experience hai. Unhone
+            Civic Studios ka social media 100k+ followers tak grow kiya, aur Sucharita Tyagi
+            ke saath <em>Pop Culture Patrol</em> co-create kiya — jo millions views tak pahuncha
+            aur Karan Johar aur Anurag Kashyap jaise logon se tareef mili.
+          </p>
+          <p>
+            KK Create par unhone Kavya ke saath long-form video vertical set up kiya aur team ko
+            7 se 40+ members tak grow karne mein key role play kiya. Ab woh course vertical lead
+            karte hain aur naye creators ko mentor karte hain.
+          </p>
+          <p style="color:var(--text-dim);font-size:.92rem">
+            Jab content nahi bana rahe hote, to Varun 10K walk par, basketball court par,
+            ya politics par un logon se debate karte hue milenge jo unse bilkul agree nahi karte.
+          </p>
+        </div>
+        <ul class="inst-wins">
+          <li><span class="tick" aria-hidden="true">✓</span> Civic Studios ka social media 0 → 100k+ followers</li>
+          <li><span class="tick" aria-hidden="true">✓</span> <em>Pop Culture Patrol</em> co-creator — millions of views</li>
+          <li><span class="tick" aria-hidden="true">✓</span> KK Create ka long-form vertical establish kiya</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Team scale-up: 7 → 40+ members</li>
+          <li><span class="tick" aria-hidden="true">✓</span> Ab naye creators ko full-time mentor karte hain</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- About KK Create -->
+    <div class="glass reveal d3" style="margin-top:clamp(28px,5vw,48px);padding:clamp(24px,4.5vw,40px)">
+      <h3 style="margin-bottom:12px">About KK Create</h3>
+      <p style="color:var(--text-soft);margin-bottom:22px;max-width:70ch">
+        KK Create ek content studio aur creator-education brand hai, jiske YouTube channel par
+        5.58M+ subscribers hain. Humara kaam hai AI-powered content creation ko simple banana —
+        taaki koi bhi, bina experience ke, apna creator journey shuru kar sake.
+      </p>
+      <div class="stats" style="margin-top:0">
+        <div class="stat hero-stat">
+          <span class="num" data-count="5.58" data-decimals="2" data-suffix="M">0M</span>
+          <span class="lbl">Subscribers</span>
+        </div>
+        <div class="stat">
+          <span class="num" data-count="40" data-suffix="+">0+</span>
+          <span class="lbl">Team Members</span>
+        </div>
+        <div class="stat">
+          <!-- EDIT: replace with your real total-views figure -->
+          <span class="num ph" style="-webkit-text-fill-color:#FBCFE8;background:none;font-size:1rem;padding:6px 10px">[TOTAL VIEWS]</span>
+          <span class="lbl">Total Views</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path class="fill" d="M0,38 C280,80 540,6 820,36 C1080,64 1280,14 1440,46 L1440,90 L0,90 Z"/>
+    <path class="line" d="M0,38 C280,80 540,6 820,36 C1080,64 1280,14 1440,46"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     8. SOCIAL PROOF  —  ALL PLACEHOLDERS, FILL LATER
+     EDIT: TESTIMONIALS + STUDENT RESULTS
+     Replace each .placeholder-card with a real .glass .testi card.
+     A filled example is included at the bottom, commented out.
+     ============================================================ -->
+<section class="band glow-proof" id="proof">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(32px,6vw,52px)">
+      <span class="eyebrow reveal"><span class="dot"></span> Social proof</span>
+      <h2 class="reveal d1">Students <span class="grad-text">kya kehte hain</span></h2>
+      <p class="lead reveal d2">
+        Ye section abhi placeholders par hai — real testimonials aur results add hone baaki hain.
+      </p>
+    </div>
+
+    <div class="grid g-3" style="margin-bottom:clamp(20px,3.5vw,30px)">
+      <article class="glass testi placeholder-card reveal">
+        <span class="placeholder-tag">Testimonial 1</span>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>[TESTIMONIAL TEXT — 2 se 3 lines, student ke apne words mein. Kya problem thi, course ke baad kya change hua.]</blockquote>
+        <div class="who">
+          <span class="av" aria-hidden="true">?</span>
+          <span><span class="nm">[STUDENT NAME]</span><span class="mt">[NICHE] · [RESULT]</span></span>
+        </div>
+      </article>
+
+      <article class="glass testi placeholder-card reveal d1">
+        <span class="placeholder-tag">Testimonial 2</span>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>[TESTIMONIAL TEXT — 2 se 3 lines.]</blockquote>
+        <div class="who">
+          <span class="av" aria-hidden="true">?</span>
+          <span><span class="nm">[STUDENT NAME]</span><span class="mt">[NICHE] · [RESULT]</span></span>
+        </div>
+      </article>
+
+      <article class="glass testi placeholder-card reveal d2">
+        <span class="placeholder-tag">Testimonial 3</span>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <blockquote>[TESTIMONIAL TEXT — 2 se 3 lines.]</blockquote>
+        <div class="who">
+          <span class="av" aria-hidden="true">?</span>
+          <span><span class="nm">[STUDENT NAME]</span><span class="mt">[NICHE] · [RESULT]</span></span>
+        </div>
+      </article>
+    </div>
+
+    <!-- Student results -->
+    <div class="grid g-3">
+      <article class="glass placeholder-card center reveal" style="padding:28px 22px">
+        <span class="placeholder-tag">Result 1</span>
+        <p style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.9rem;color:var(--lime);margin:8px 0 6px">[NUMBER]</p>
+        <p style="font-size:.9rem;color:var(--text-soft);margin:0">[e.g. subscribers in 60 days — student ka naam]</p>
+      </article>
+      <article class="glass placeholder-card center reveal d1" style="padding:28px 22px">
+        <span class="placeholder-tag">Result 2</span>
+        <p style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.9rem;color:var(--lime);margin:8px 0 6px">[NUMBER]</p>
+        <p style="font-size:.9rem;color:var(--text-soft);margin:0">[e.g. views on first viral video]</p>
+      </article>
+      <article class="glass placeholder-card center reveal d2" style="padding:28px 22px">
+        <span class="placeholder-tag">Result 3</span>
+        <p style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.9rem;color:var(--lime);margin:8px 0 6px">[NUMBER]</p>
+        <p style="font-size:.9rem;color:var(--text-soft);margin:0">[e.g. first brand deal amount]</p>
+      </article>
+    </div>
+
+    <!-- FILLED EXAMPLE — copy this structure, drop the .placeholder-card class:
+    <article class="glass testi reveal">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <blockquote>"Pehle 4 mahine mein ek bhi video post nahi ki thi. Niche module ke baad clarity aayi, aur ab weekly post karta hoon."</blockquote>
+      <div class="who">
+        <span class="av" aria-hidden="true">AS</span>
+        <span><span class="nm">Aarav Sharma</span><span class="mt">Tech · 2.4K subs in 3 months</span></span>
+      </div>
+    </article>
+    -->
+  </div>
+</section>
+
+<div class="wave flip" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path class="fill" d="M0,44 C240,8 520,78 780,40 C1040,6 1250,72 1440,38 L1440,90 L0,90 Z"/>
+    <path class="line" d="M0,44 C240,8 520,78 780,40 C1040,6 1250,72 1440,38"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     9. PRICING + BONUSES
+     EDIT: PRICE / CHECKOUT — set CONFIG.PRICE_* and CONFIG.CHECKOUT_URL in the JS
+     ============================================================ -->
+<section class="band glow-pricing" id="pricing">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(32px,6vw,52px)">
+      <span class="eyebrow reveal"><span class="dot"></span> Pricing</span>
+      <h2 class="reveal d1">Ek payment, <span class="grad-text">lifetime access</span></h2>
+      <p class="lead reveal d2">
+        No subscription, no hidden charges. Ek baar join kijiye, course hamesha aapka.
+      </p>
+    </div>
+
+    <div class="price-card reveal d2">
+      <div class="price-head">
+        <h3>KK Create Creator Academy</h3>
+        <p class="sub">Complete beginner course — 10 modules, self-paced</p>
+        <div class="price-amount">
+          <span class="now" id="priceNow">₹999</span>
+          <span class="was" id="priceWas">₹4,999</span>
+        </div>
+        <p class="price-meta" id="priceMeta">One-time payment · Lifetime access · Mobile + desktop</p>
+      </div>
+
+      <ul class="incl">
+        <li><span class="tick" aria-hidden="true">✓</span> Saare 10 modules, recorded aur self-paced</li>
+        <li><span class="tick" aria-hidden="true">✓</span> Niche-finding framework aur worksheets</li>
+        <li><span class="tick" aria-hidden="true">✓</span> Thumbnail aur banner templates</li>
+        <li><span class="tick" aria-hidden="true">✓</span> AI prompts library for scripting &amp; ideas</li>
+        <li><span class="tick" aria-hidden="true">✓</span> Monetization checklist (AdSense + brand deals)</li>
+        <li><span class="tick" aria-hidden="true">✓</span> Lifetime access + future updates free</li>
+        <li><span class="tick" aria-hidden="true">✓</span> Free workshop ka access bhi included</li>
+
+        <!-- The wheel-won bonus gets injected right here by JS -->
+        <li class="won-row" id="wonRow" hidden>
+          <span class="tick" aria-hidden="true">★</span>
+          <span><span id="wonRowName">—</span><span class="won-flag">Included for you</span></span>
+        </li>
+      </ul>
+
+      <a href="#" class="btn btn-primary btn-block btn-lg" id="buyBtn" data-cta="pricing-main">
+        Join now — <span id="buyPrice">₹999</span> <span aria-hidden="true">→</span>
+      </a>
+
+      <div class="price-foot">
+        <p style="margin:14px 0 0">Secure checkout · UPI, cards, net banking</p>
+        <div class="pay-icons" aria-hidden="true">
+          <span>UPI</span><span>Visa</span><span>Mastercard</span><span>RuPay</span><span>Net Banking</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="center" style="margin-top:26px;font-size:.9rem;color:var(--text-dim)">
+      Abhi ready nahi? <a href="#workshop" style="color:var(--lime);text-decoration:underline">Free workshop join kijiye</a> — bilkul free hai.
+    </p>
+  </div>
+</section>
+
+<div class="wave" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path class="fill" d="M0,40 C260,82 520,8 800,38 C1060,66 1270,16 1440,44 L1440,90 L0,90 Z"/>
+    <path class="line" d="M0,40 C260,82 520,8 800,38 C1060,66 1270,16 1440,44"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     10. FAQ
+     EDIT: FAQ — add/remove .faq-item blocks
+     ============================================================ -->
+<section class="band glow-faq" id="faq">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:clamp(32px,6vw,52px)">
+      <span class="eyebrow reveal"><span class="dot"></span> Questions</span>
+      <h2 class="reveal d1">Aapke <span class="grad-text">sawaal</span></h2>
+    </div>
+
+    <div class="faq-list" id="faqList">
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Mujhe content creation ka zero experience hai. Ye course mere liye hai?</span>
+          <span class="ic" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="inner">
+          <p>Haan, course specifically complete beginners ke liye banaya gaya hai. Hum
+          maan kar chalte hain ki aapne ek bhi video nahi banayi. Pehla module hi
+          "kya banana hai aur kahan se shuru karna hai" se start hota hai.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal d1">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Kya sirf phone se poora course follow kar sakta hoon?</span>
+          <span class="ic" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="inner">
+          <p>Bilkul. Course mobile par dekhne ke liye optimised hai, aur editing,
+          thumbnail aur AI wale modules mein phone-friendly tools bhi cover kiye gaye hain.
+          Laptop ho to accha hai, par zaroori nahi.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal d2">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Course live hai ya recorded?</span>
+          <span class="ic" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="inner">
+          <p>Course fully recorded aur self-paced hai — jab time mile tab dekhiye,
+          apni speed se. Live element free workshop ke through aata hai, jiska access
+          course ke saath included hai.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal d3">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Access kitne time ke liye milta hai?</span>
+          <span class="ic" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="inner">
+          <p>Lifetime access. Ek baar join karne ke baad course hamesha aapka rehta hai,
+          aur aage jo updates add honge woh bhi free milenge.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Course Hindi mein hai ya English mein?</span>
+          <span class="ic" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="inner">
+          <p>Teaching simple Hinglish mein hai — jaise KK Create ke videos. Technical
+          terms English mein, samjhaana Hindi mein. Isliye language kabhi barrier nahi banti.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal d1">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Course complete karne mein kitna time lagega?</span>
+          <span class="ic" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="inner">
+          <p>Agar hafte mein 3-4 ghante dein, to 2 se 3 hafte mein poora ho jaata hai.
+          Par kuch bhi rush karne ki zaroorat nahi — self-paced hai, aur modules ko
+          apni journey ke hisaab se dobara dekh sakte hain.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal d2">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Camera, mic, laptop — kya equipment chahiye?</span>
+          <span class="ic" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="inner">
+          <p>Shuruaat ke liye sirf ek smartphone chahiye. Course mein hum budget setups
+          cover karte hain aur batate hain ki kab upgrade karna actually worth hai —
+          pehle din se mehnga gear kharidne ki zaroorat nahi.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal d3">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Kya is course se views aur subscribers guarantee hain?</span>
+          <span class="ic" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="inner">
+          <p>Nahi, aur koi bhi honest course ye guarantee nahi de sakta. Jo hum de sakte
+          hain woh hai ek clear system — niche, ideas, thumbnails, algorithm aur
+          consistency ka. Results aapke execution aur consistency par depend karte hain.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Spin wheel wala bonus kaise milega?</span>
+          <span class="ic" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="inner">
+          <p>Spin karke apna bonus claim kijiye (naam + WhatsApp number). Woh bonus aapke
+          naam par reserve ho jaata hai aur pricing section mein "included for you" dikhne
+          lagta hai. Course join karne ke baad delivery WhatsApp/email par hoti hai.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal d1">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Payment ke baad course kaise access karun?</span>
+          <span class="ic" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a"><div class="inner">
+          <p>Payment complete hone ke turant baad aapko access details mil jaati hain.
+          Koi dikkat aaye to WhatsApp par message kar dijiye — team help kar degi.</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave flip" aria-hidden="true">
+  <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <path class="fill" d="M0,48 C250,10 500,80 760,44 C1020,10 1240,70 1440,36 L1440,90 L0,90 Z"/>
+    <path class="line" d="M0,48 C250,10 500,80 760,44 C1020,10 1240,70 1440,36"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     11. FINAL CTA
+     ============================================================ -->
+<section class="band glow-final">
+  <div class="wrap">
+    <div class="final-box reveal">
+      <span class="eyebrow"><span class="dot"></span> Last thing</span>
+      <h2>Aaj shuru kijiye.<br><span class="grad-text">Kal wala "kal" kabhi nahi aata.</span></h2>
+      <p class="lead center" style="margin-bottom:28px">
+        Ek payment, 10 modules, lifetime access. Niche se lekar earning tak ka poora roadmap —
+        aur agar abhi ready nahi hain, free workshop bhi khula hai.
+      </p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+        <a href="#" class="btn btn-primary btn-lg" id="buyBtn2" data-cta="final">
+          Join for <span class="buy-price">₹999</span> <span aria-hidden="true">→</span>
+        </a>
+        <a href="#workshop" class="btn btn-ghost btn-lg" data-cta="final-workshop">Free workshop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <a class="logo" href="#top" style="margin-bottom:14px" aria-label="KK Create home">
+          <div class="logo-mark" aria-hidden="true">KK</div>
+          <span class="logo-text">
+            <span class="name">KK Create</span>
+            <span class="tag">Creator Academy</span>
+          </span>
+        </a>
+        <p>Creator education from the KK Create team — 5.58M+ subscribers strong. Simple, honest, AI-powered content creation.</p>
+      </div>
+      <nav class="f-links" aria-label="Footer">
+        <a href="#modules">Course</a>
+        <a href="#workshop">Free Workshop</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <!-- EDIT: LEGAL LINKS -->
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Refund Policy</a>
+      </nav>
+    </div>
+    <p class="f-base">© <span id="year">2026</span> KK Create. All rights reserved. · Results depend on your own effort and consistency — we make no income guarantees.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY MOBILE CTA BAR
+     ============================================================ -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sb-price">
+    <span class="amt buy-price">₹999</span>
+    <span class="lb">Lifetime</span>
+  </div>
+  <a href="#" class="btn btn-primary" id="buyBtn3" data-cta="sticky">Join now →</a>
+</div>
+
+<canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+<script>
+/* ============================================================================
+   ██  CONFIG — EVERYTHING YOU NEED TO EDIT IS IN THIS ONE BLOCK  ██
+   ============================================================================ */
+const CONFIG = {
+
+  /* ---------- COURSE + PRICE ---------- */
+  COURSE_NAME:   'KK Create Creator Academy',
+  PRICE:         '₹999',        // shown everywhere (hero, pricing, sticky bar)
+  PRICE_COMPARE: '₹4,999',      // struck-through "value" price. Set to '' to hide it.
+  PRICE_NOTE:    'One-time payment · Lifetime access · Mobile + desktop',
+
+  /* ---------- CHECKOUT ----------
+     TODO: paste your payment link here (Razorpay / Instamojo / Cashfree /
+     Graphy / Rzp page / Stripe — any URL works). Until it is filled in,
+     every buy button scrolls to the workshop form instead of 404-ing.      */
+  CHECKOUT_URL: '',
+
+  /* ---------- LEAD CAPTURE ----------
+     TODO: paste your Google Apps Script Web App URL here.
+     Full setup (2 minutes):
+       1. Make a Google Sheet with header row:
+          timestamp | name | phone | source | bonus
+       2. Extensions → Apps Script, paste this:
+            function doPost(e){
+              var d = JSON.parse(e.postData.contents);
+              SpreadsheetApp.getActiveSheet().appendRow([
+                new Date(), d.name, d.phone, d.source, d.bonus || ''
+              ]);
+              return ContentService.createTextOutput('ok');
+            }
+       3. Deploy → New deployment → Web app
+          → Execute as: Me → Who has access: Anyone
+       4. Copy the /exec URL and paste it below.
+     Leave empty to test the page — submissions are logged to the console
+     and (if WHATSAPP_FALLBACK is true) handed off to WhatsApp instead.    */
+  LEAD_ENDPOINT: '',
+
+  /* ---------- WHATSAPP ----------
+     Your business WhatsApp number in international format, no + or spaces.
+     Used as the fallback when LEAD_ENDPOINT is empty.                      */
+  WHATSAPP_NUMBER:   '',      // e.g. '919876543210'
+  WHATSAPP_FALLBACK: true,    // false = never open WhatsApp
+
+  /* ---------- FREE WORKSHOP ----------
+     Replace the placeholders once the date is locked. Keeping them as-is
+     shows a clearly-marked [PLACEHOLDER] on the page — no fake urgency.    */
+  WORKSHOP_DATE: '[WORKSHOP DATE]',
+  WORKSHOP_TIME: '[WORKSHOP TIME]',
+
+  /* ---------- SPIN THE WHEEL BONUSES ----------
+     Exactly 6 slices. Every spin wins — there are no empty slices.
+     `label` is what's painted on the wheel (keep it short, 2 lines max).
+     `name`  is the full name used in the win badge + pricing section.      */
+  BONUSES: [
+    { label: 'Thumbnail\nPack',     name: 'Thumbnail Pack (20 editable templates)', icon: '🖼️', color: '#7C3AED' },
+    { label: 'Niche Finder\nSheet', name: 'Niche Finder Sheet',                     icon: '🎯', color: '#EC4899' },
+    { label: 'Community\nAccess',   name: 'Community Access',                       icon: '👥', color: '#3B82F6' },
+    { label: 'Video Idea\nBank',    name: 'Video Idea Bank (100+ ideas)',           icon: '💡', color: '#22D3EE' },
+    { label: 'Banner\nKit',         name: 'Banner Kit',                             icon: '🎨', color: '#A855F7' },
+    { label: 'Live Q&A\nPass',      name: 'Live Q&A Pass',                          icon: '🎤', color: '#F472B6' }
+  ],
+
+  /* ---------- CREATOR CARD ---------- */
+  CARD_HANDLE: '@kkcreate',     // printed on the generated card
+  CARD_FOOTER: 'Powered by KK Create'
+};
+/* ==========================  END OF CONFIG  ============================== */
+
+
+/* ============================================================================
+   1. MOTION + DEVICE CAPABILITY
+   Respects prefers-reduced-motion and downgrades on low-power devices.
+   ============================================================================ */
+const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const LOW_POWER = (function(){
+  if (REDUCED) return true;
+  const cores = navigator.hardwareConcurrency || 4;
+  const mem   = navigator.deviceMemory || 4;           // Chrome only
+  const small = window.innerWidth < 480;
+  return cores <= 4 && (mem <= 4 || small);
+})();
+if (LOW_POWER) document.documentElement.classList.add('low-power');
+
+const $  = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+
+/* ============================================================================
+   2. LIVING BACKGROUND CANVAS
+   Starfield + drifting creator shapes (play, camera, mic, heart, frame),
+   with a gentle scroll parallax. Pure canvas, no libraries.
+   ============================================================================ */
+(function background(){
+  const cv = $('#bgCanvas');
+  if (!cv) return;
+  const ctx = cv.getContext('2d');
+
+  let W = 0, H = 0, DPR = 1, stars = [], shapes = [], scrollY = 0, raf = null, running = true;
+
+  // Counts scale down on small / weak devices
+  const starCount  = LOW_POWER ? 45 : (window.innerWidth < 760 ? 70 : 130);
+  const shapeCount = LOW_POWER ? 5  : (window.innerWidth < 760 ? 7  : 12);
+  const SHAPE_KINDS = ['play', 'camera', 'mic', 'heart', 'frame', 'spark'];
+  const SHAPE_TINTS = ['#A78BFA', '#F472B6', '#60A5FA', '#B4F461', '#22D3EE'];
+
+  const rand = (a, b) => a + Math.random() * (b - a);
+
+  function resize(){
+    DPR = Math.min(window.devicePixelRatio || 1, 1.5);   // cap DPR for perf
+    W = window.innerWidth; H = window.innerHeight;
+    cv.width = Math.floor(W * DPR);
+    cv.height = Math.floor(H * DPR);
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    build();
+  }
+
+  function build(){
+    stars = Array.from({ length: starCount }, () => ({
+      x: Math.random() * W,
+      y: Math.random() * H * 1.6,     // extra height so parallax has room
+      r: rand(0.5, 1.7),
+      a: rand(0.18, 0.75),
+      tw: rand(0.004, 0.018),         // twinkle speed
+      ph: Math.random() * Math.PI * 2,
+      depth: rand(0.08, 0.42)         // parallax factor
+    }));
+
+    shapes = Array.from({ length: shapeCount }, (_, i) => ({
+      kind: SHAPE_KINDS[i % SHAPE_KINDS.length],
+      x: Math.random() * W,
+      y: Math.random() * H * 1.6,
+      size: rand(18, 46),
+      rot: Math.random() * Math.PI * 2,
+      spin: rand(-0.0022, 0.0022),
+      vx: rand(-0.09, 0.09),
+      vy: rand(-0.14, -0.03),          // drift slowly upward
+      a: rand(0.07, 0.17),
+      tint: SHAPE_TINTS[i % SHAPE_TINTS.length],
+      depth: rand(0.12, 0.5)
+    }));
+  }
+
+  /* --- Shape paths, drawn around (0,0) in a unit-ish box of `s` --- */
+  function drawShape(sh){
+    const s = sh.size;
+    ctx.strokeStyle = sh.tint;
+    ctx.fillStyle   = sh.tint;
+    ctx.lineWidth   = Math.max(1.4, s * 0.055);
+    ctx.lineJoin = ctx.lineCap = 'round';
+
+    switch (sh.kind) {
+      case 'play': // circle with a triangle inside
+        ctx.beginPath(); ctx.arc(0, 0, s / 2, 0, Math.PI * 2); ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(-s * 0.13, -s * 0.19);
+        ctx.lineTo( s * 0.22,  0);
+        ctx.lineTo(-s * 0.13,  s * 0.19);
+        ctx.closePath(); ctx.fill();
+        break;
+
+      case 'camera': // body + lens + top bump
+        ctx.beginPath();
+        roundRect(-s * 0.5, -s * 0.3, s, s * 0.62, s * 0.12);
+        ctx.stroke();
+        ctx.beginPath(); ctx.arc(0, 0.02 * s, s * 0.16, 0, Math.PI * 2); ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(-s * 0.16, -s * 0.3);
+        ctx.lineTo(-s * 0.08, -s * 0.44);
+        ctx.lineTo( s * 0.08, -s * 0.44);
+        ctx.lineTo( s * 0.16, -s * 0.3);
+        ctx.stroke();
+        break;
+
+      case 'mic': // capsule + stand
+        ctx.beginPath();
+        roundRect(-s * 0.15, -s * 0.46, s * 0.3, s * 0.56, s * 0.15);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(0, s * 0.02, s * 0.3, 0, Math.PI, false);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(0, s * 0.32); ctx.lineTo(0, s * 0.46);
+        ctx.moveTo(-s * 0.16, s * 0.46); ctx.lineTo(s * 0.16, s * 0.46);
+        ctx.stroke();
+        break;
+
+      case 'heart':
+        ctx.beginPath();
+        ctx.moveTo(0, s * 0.34);
+        ctx.bezierCurveTo(-s * 0.72, -s * 0.1, -s * 0.3, -s * 0.52, 0, -s * 0.18);
+        ctx.bezierCurveTo( s * 0.3, -s * 0.52,  s * 0.72, -s * 0.1, 0,  s * 0.34);
+        ctx.stroke();
+        break;
+
+      case 'frame': // thumbnail frame with a tiny play mark
+        ctx.beginPath();
+        roundRect(-s * 0.55, -s * 0.34, s * 1.1, s * 0.68, s * 0.1);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(-s * 0.08, -s * 0.13);
+        ctx.lineTo( s * 0.16, 0);
+        ctx.lineTo(-s * 0.08,  s * 0.13);
+        ctx.closePath(); ctx.fill();
+        break;
+
+      case 'spark': // four-point sparkle
+        ctx.beginPath();
+        ctx.moveTo(0, -s * 0.5);
+        ctx.quadraticCurveTo(s * 0.08, -s * 0.08, s * 0.5, 0);
+        ctx.quadraticCurveTo(s * 0.08, s * 0.08, 0, s * 0.5);
+        ctx.quadraticCurveTo(-s * 0.08, s * 0.08, -s * 0.5, 0);
+        ctx.quadraticCurveTo(-s * 0.08, -s * 0.08, 0, -s * 0.5);
+        ctx.closePath(); ctx.stroke();
+        break;
+    }
+  }
+
+  function roundRect(x, y, w, h, r){
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y,     x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x,     y + h, r);
+    ctx.arcTo(x,     y + h, x,     y,     r);
+    ctx.arcTo(x,     y,     x + w, y,     r);
+    ctx.closePath();
+  }
+
+  let t = 0;
+  function frame(){
+    ctx.clearRect(0, 0, W, H);
+    t++;
+
+    // Stars
+    for (const st of stars){
+      const y = wrapY(st.y - scrollY * st.depth);
+      const alpha = REDUCED ? st.a : st.a * (0.55 + 0.45 * Math.sin(t * st.tw + st.ph));
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = '#FFF8F0';
+      ctx.beginPath(); ctx.arc(st.x, y, st.r, 0, Math.PI * 2); ctx.fill();
+    }
+
+    // Creator shapes
+    for (const sh of shapes){
+      if (!REDUCED){
+        sh.x += sh.vx; sh.y += sh.vy; sh.rot += sh.spin;
+        if (sh.x < -80) sh.x = W + 80;
+        if (sh.x > W + 80) sh.x = -80;
+        if (sh.y < -80) sh.y = H * 1.6 + 80;
+      }
+      const y = wrapY(sh.y - scrollY * sh.depth);
+      ctx.globalAlpha = sh.a;
+      ctx.save();
+      ctx.translate(sh.x, y);
+      ctx.rotate(sh.rot);
+      drawShape(sh);
+      ctx.restore();
+    }
+
+    ctx.globalAlpha = 1;
+    if (running && !REDUCED) raf = requestAnimationFrame(frame);
+  }
+
+  // Keeps parallaxed items inside a scrollable band instead of flying away
+  function wrapY(y){
+    const span = H * 1.6 + 160;
+    let v = y % span;
+    if (v < -80) v += span;
+    return v;
+  }
+
+  function onScroll(){ scrollY = window.scrollY || window.pageYOffset || 0; }
+
+  window.addEventListener('resize', debounce(resize, 200));
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Pause when the tab is hidden — saves battery on mobile
+  document.addEventListener('visibilitychange', () => {
+    running = !document.hidden;
+    if (running && !REDUCED && !raf) raf = requestAnimationFrame(frame);
+    if (!running && raf){ cancelAnimationFrame(raf); raf = null; }
+  });
+
+  resize();
+  onScroll();
+  if (REDUCED) frame();                                  // one static paint
+  else raf = requestAnimationFrame(frame);
+})();
+
+function debounce(fn, ms){
+  let id; return (...a) => { clearTimeout(id); id = setTimeout(() => fn(...a), ms); };
+}
+
+
+/* ============================================================================
+   3. DESKTOP CURSOR-FOLLOW GLOW  (skipped on touch + low-power)
+   ============================================================================ */
+(function cursorGlow(){
+  const el = $('#cursorGlow');
+  if (!el || LOW_POWER) return;
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+  let tx = window.innerWidth / 2, ty = window.innerHeight / 2, cx = tx, cy = ty, on = false;
+
+  window.addEventListener('mousemove', e => {
+    tx = e.clientX; ty = e.clientY;
+    if (!on){ on = true; el.classList.add('on'); }
+  }, { passive: true });
+
+  (function loop(){
+    cx += (tx - cx) * 0.085;                 // lerp for a soft trailing feel
+    cy += (ty - cy) * 0.085;
+    el.style.setProperty('--mx', cx + 'px');
+    el.style.setProperty('--my', cy + 'px');
+    requestAnimationFrame(loop);
+  })();
+})();
+
+
+/* ============================================================================
+   4. HEADER STATE + STICKY MOBILE CTA BAR
+   ============================================================================ */
+(function chrome(){
+  const header = $('#siteHeader');
+  const bar    = $('#stickyBar');
+  const hero   = $('.hero');
+
+  function onScroll(){
+    const y = window.scrollY || 0;
+    header.classList.toggle('stuck', y > 40);
+    // Sticky bar appears once the hero CTA has scrolled past
+    const trigger = hero ? hero.offsetHeight * 0.75 : 500;
+    bar.classList.toggle('up', y > trigger);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+
+/* ============================================================================
+   5. SCROLL REVEAL
+   ============================================================================ */
+(function reveal(){
+  const items = $$('.reveal');
+  if (REDUCED || !('IntersectionObserver' in window)){
+    items.forEach(el => el.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  items.forEach(el => io.observe(el));
+})();
+
+
+/* ============================================================================
+   6. COUNT-UP NUMBERS  (5.58M subscribers etc.)
+   ============================================================================ */
+(function countUp(){
+  const nums = $$('[data-count]');
+  if (!nums.length) return;
+
+  function run(el){
+    const target   = parseFloat(el.dataset.count);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    const suffix   = el.dataset.suffix || '';
+    if (REDUCED){ el.textContent = target.toFixed(decimals) + suffix; return; }
+
+    const dur = 1800;
+    const t0 = performance.now();
+    (function tick(now){
+      const p = Math.min((now - t0) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);              // easeOutCubic
+      el.textContent = (target * eased).toFixed(decimals) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  if (!('IntersectionObserver' in window)){ nums.forEach(run); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting){ run(e.target); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.5 });
+  nums.forEach(el => io.observe(el));
+})();
+
+
+/* ============================================================================
+   7. FAQ ACCORDION
+   ============================================================================ */
+(function faq(){
+  $$('#faqList .faq-item').forEach(item => {
+    const btn = $('.faq-q', item);
+    const ans = $('.faq-a', item);
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      // Close siblings for a tidy single-open accordion
+      $$('#faqList .faq-item.open').forEach(o => {
+        o.classList.remove('open');
+        $('.faq-q', o).setAttribute('aria-expanded', 'false');
+        $('.faq-a', o).style.maxHeight = '0px';
+      });
+      if (!isOpen){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+  // Keep the open panel correctly sized after a resize
+  window.addEventListener('resize', debounce(() => {
+    const open = $('#faqList .faq-item.open');
+    if (open) $('.faq-a', open).style.maxHeight = $('.faq-a', open).scrollHeight + 'px';
+  }, 150));
+})();
+
+
+/* ============================================================================
+   8. MY CREATOR CARD
+   Renders a 1080x1350 shareable card on <canvas> and lets the visitor
+   download it as a PNG (or use the native share sheet on mobile).
+   ============================================================================ */
+const CreatorCard = (function(){
+  const cv = $('#creatorCard');
+  if (!cv) return {};
+  const ctx = cv.getContext('2d');
+  const W = cv.width, H = cv.height;
+
+  let state = { name: '', niche: '', goal: '', made: false };
+
+  /* ---- small canvas helpers ---- */
+  function rr(x, y, w, h, r){
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y,     x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x,     y + h, r);
+    ctx.arcTo(x,     y + h, x,     y,     r);
+    ctx.arcTo(x,     y,     x + w, y,     r);
+    ctx.closePath();
+  }
+  function orb(x, y, r, color, alpha){
+    const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+    g.addColorStop(0, color); g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.globalAlpha = alpha; ctx.fillStyle = g;
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+  // Shrinks the font until the text fits the given width
+  function fitFont(text, maxW, startPx, weight, family){
+    let px = startPx;
+    do {
+      ctx.font = `${weight} ${px}px ${family}`;
+      if (ctx.measureText(text).width <= maxW) break;
+      px -= 6;
+    } while (px > 28);
+    return px;
+  }
+
+  /* ---- the actual render ---- */
+  function draw(data){
+    const name  = (data.name  || 'Your Name').toUpperCase();
+    const niche = data.niche || 'Your Niche';
+    const goal  = data.goal  || 'Your Goal';
+
+    // Background
+    const bg = ctx.createLinearGradient(0, 0, W, H);
+    bg.addColorStop(0, '#0B0A1F'); bg.addColorStop(0.55, '#140F32'); bg.addColorStop(1, '#1B0E2E');
+    ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+
+    orb(140, 170, 620, 'rgba(124,58,237,0.85)', 0.55);
+    orb(960, 1150, 640, 'rgba(236,72,153,0.8)',  0.45);
+    orb(900, 300,  420, 'rgba(34,211,238,0.6)',  0.25);
+
+    // Faint grid
+    ctx.strokeStyle = 'rgba(255,255,255,0.045)'; ctx.lineWidth = 1;
+    for (let x = 0; x <= W; x += 90){ ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+    for (let y = 0; y <= H; y += 90){ ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+
+    // Inner border
+    ctx.strokeStyle = 'rgba(255,255,255,0.16)'; ctx.lineWidth = 2;
+    rr(44, 44, W - 88, H - 88, 46); ctx.stroke();
+
+    const FM = "'Montserrat', sans-serif", FI = "'Inter', sans-serif";
+    ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+
+    // --- Header row: logo mark + brand ---
+    const lg = ctx.createLinearGradient(100, 120, 196, 216);
+    lg.addColorStop(0, '#7C3AED'); lg.addColorStop(1, '#EC4899');
+    ctx.fillStyle = lg; rr(100, 120, 96, 96, 26); ctx.fill();
+    ctx.fillStyle = '#fff'; ctx.font = `900 40px ${FM}`;
+    ctx.textAlign = 'center'; ctx.fillText('KK', 148, 183);
+
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#FFF8F0'; ctx.font = `800 34px ${FM}`;
+    ctx.fillText('KK CREATE', 220, 162);
+    ctx.fillStyle = '#B9B4CC'; ctx.font = `600 21px ${FI}`;
+    ctx.letterSpacing = '4px';
+    ctx.fillText('CREATOR ACADEMY', 220, 196);
+    ctx.letterSpacing = '0px';
+
+    // --- "MY CREATOR CARD" eyebrow ---
+    ctx.fillStyle = 'rgba(180,244,97,0.14)';
+    rr(100, 320, 374, 64, 32); ctx.fill();
+    ctx.strokeStyle = 'rgba(180,244,97,0.45)'; ctx.lineWidth = 2;
+    rr(100, 320, 374, 64, 32); ctx.stroke();
+    ctx.fillStyle = '#B4F461'; ctx.font = `800 24px ${FM}`;
+    ctx.letterSpacing = '5px';
+    ctx.fillText('MY CREATOR CARD', 132, 361);
+    ctx.letterSpacing = '0px';
+
+    // --- Big name (auto-fit, wraps to 2 lines if needed) ---
+    const maxW = W - 220;
+    let px = fitFont(name, maxW, 118, 900, FM);
+    const nameGrad = ctx.createLinearGradient(100, 440, 900, 600);
+    nameGrad.addColorStop(0, '#FFF8F0'); nameGrad.addColorStop(0.5, '#E9D5FF'); nameGrad.addColorStop(1, '#FBCFE8');
+    ctx.fillStyle = nameGrad;
+
+    if (px <= 40 && name.includes(' ')){                 // very long name → two lines
+      const parts = name.split(' ');
+      const l1 = parts.shift(), l2 = parts.join(' ');
+      px = Math.min(fitFont(l1, maxW, 104, 900, FM), fitFont(l2, maxW, 104, 900, FM));
+      ctx.font = `900 ${px}px ${FM}`;
+      ctx.fillText(l1, 100, 530);
+      ctx.fillText(l2, 100, 530 + px * 1.05);
+    } else {
+      ctx.font = `900 ${px}px ${FM}`;
+      ctx.fillText(name, 100, 530);
+    }
+
+    // --- Niche + goal rows ---
+    function row(y, label, value, accent){
+      ctx.fillStyle = 'rgba(255,255,255,0.06)';
+      rr(100, y, W - 200, 148, 28); ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.lineWidth = 2;
+      rr(100, y, W - 200, 148, 28); ctx.stroke();
+
+      ctx.fillStyle = accent; ctx.font = `800 20px ${FM}`;
+      ctx.letterSpacing = '4px';
+      ctx.fillText(label, 142, y + 54);
+      ctx.letterSpacing = '0px';
+
+      ctx.fillStyle = '#FFF8F0';
+      const vpx = fitFont(value, W - 300, 46, 800, FM);
+      ctx.font = `800 ${vpx}px ${FM}`;
+      ctx.fillText(value, 142, y + 112);
+    }
+    row(700,  'MY NICHE', niche, '#A78BFA');
+    row(876,  'MY GOAL',  goal,  '#F472B6');
+
+    // --- Footer ---
+    ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(100, 1118); ctx.lineTo(W - 100, 1118); ctx.stroke();
+
+    ctx.fillStyle = '#FFF8F0'; ctx.font = `800 30px ${FM}`;
+    ctx.fillText(CONFIG.CARD_FOOTER, 100, 1192);
+    ctx.fillStyle = '#8B86A0'; ctx.font = `600 25px ${FI}`;
+    ctx.fillText(CONFIG.CARD_HANDLE + ' · 5.58M subscribers', 100, 1238);
+
+    // Decorative play badge, bottom right
+    const pg = ctx.createLinearGradient(W - 230, 1140, W - 110, 1260);
+    pg.addColorStop(0, '#B4F461'); pg.addColorStop(1, '#8FD14F');
+    ctx.fillStyle = pg;
+    ctx.beginPath(); ctx.arc(W - 170, 1196, 58, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#0A1403';
+    ctx.beginPath();
+    ctx.moveTo(W - 188, 1168); ctx.lineTo(W - 140, 1196); ctx.lineTo(W - 188, 1224);
+    ctx.closePath(); ctx.fill();
+  }
+
+  /* ---- empty/placeholder state shown before the form is filled ---- */
+  function drawPlaceholder(){
+    draw({ name: 'Your Name', niche: 'Your Niche', goal: 'Your Goal' });
+    ctx.fillStyle = 'rgba(11,10,31,0.55)'; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = '#FFF8F0';
+    ctx.font = `800 40px 'Montserrat', sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.fillText('Form bhariye →', W * 0.5, H * 0.45);
+    ctx.font = `500 28px 'Inter', sans-serif`;
+    ctx.fillStyle = '#B9B4CC';
+    ctx.fillText('Card yahan live ban jayega', W * 0.5, H * 0.45 + 48);
+    ctx.textAlign = 'left';
+  }
+
+  function fileName(){
+    const safe = (state.name || 'creator').replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+    return `kk-create-creator-card-${safe}.png`;
+  }
+
+  function download(){
+    if (!state.made){ drawPlaceholder(); }
+    cv.toBlob(blob => {
+      if (!blob) return;
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = fileName();
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }, 'image/png');
+  }
+
+  async function share(){
+    // Native share sheet where supported (most Indian mobile browsers), else download
+    cv.toBlob(async blob => {
+      if (!blob) return;
+      const file = new File([blob], fileName(), { type: 'image/png' });
+      if (navigator.canShare && navigator.canShare({ files: [file] })){
+        try {
+          await navigator.share({
+            files: [file],
+            title: 'My Creator Card',
+            text: `Main ${state.niche || 'content'} creator ban raha hoon 🚀 — ${CONFIG.CARD_FOOTER}`
+          });
+          return;
+        } catch (err){ /* user cancelled — fall through to download */ }
+      }
+      download();
+    }, 'image/png');
+  }
+
+  // Fonts must be ready or the first paint uses a fallback face
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawPlaceholder);
+  else drawPlaceholder();
+
+  return {
+    render(data){ state = { ...data, made: true }; draw(data); },
+    download, share,
+    get made(){ return state.made; }
+  };
+})();
+
+/* ---- Creator Card form wiring ---- */
+(function ccForm(){
+  const form = $('#ccForm');
+  if (!form) return;
+
+  const nameEl  = $('#ccName'), nicheEl = $('#ccNiche'), goalEl = $('#ccGoal');
+  const after   = $('#ccAfter');
+
+  function setErr(el, bad){ el.closest('.field').classList.toggle('invalid', bad); }
+
+  // Live preview as the user types/selects — feels instant
+  function live(){
+    if (nameEl.value.trim().length >= 2 && nicheEl.value && goalEl.value){
+      CreatorCard.render({ name: nameEl.value.trim(), niche: nicheEl.value, goal: goalEl.value });
+    }
+  }
+  [nameEl, nicheEl, goalEl].forEach(el => {
+    el.addEventListener('input',  () => { setErr(el, false); live(); });
+    el.addEventListener('change', () => { setErr(el, false); live(); });
+  });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const okName  = nameEl.value.trim().length >= 2;
+    const okNiche = !!nicheEl.value;
+    const okGoal  = !!goalEl.value;
+    setErr(nameEl, !okName); setErr(nicheEl, !okNiche); setErr(goalEl, !okGoal);
+    if (!okName){ nameEl.focus(); return; }
+    if (!okNiche){ nicheEl.focus(); return; }
+    if (!okGoal){ goalEl.focus(); return; }
+
+    CreatorCard.render({ name: nameEl.value.trim(), niche: nicheEl.value, goal: goalEl.value });
+    after.classList.add('show');
+    // Bring the finished card into view on mobile, where it sits below the form
+    if (window.innerWidth <= 900){
+      $('.cc-preview').scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'center' });
+    }
+  });
+
+  $('#ccDownload').addEventListener('click', () => CreatorCard.download());
+  $('#ccShare').addEventListener('click',    () => CreatorCard.share());
+})();
+
+
+/* ============================================================================
+   9. CONFETTI  (tiny particle burst, canvas only)
+   ============================================================================ */
+const Confetti = (function(){
+  const cv = $('#confettiCanvas');
+  if (!cv) return { fire(){} };
+  const ctx = cv.getContext('2d');
+  const COLORS = ['#7C3AED', '#EC4899', '#B4F461', '#22D3EE', '#F472B6', '#FFF8F0'];
+  let parts = [], raf = null, DPR = 1;
+
+  function fire(count){
+    if (REDUCED) return;
+    DPR = Math.min(window.devicePixelRatio || 1, 1.5);
+    cv.width  = Math.floor(window.innerWidth  * DPR);
+    cv.height = Math.floor(window.innerHeight * DPR);
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    cv.style.display = 'block';
+
+    const n = count || (LOW_POWER ? 70 : 150);
+    const cx = window.innerWidth / 2;
+    const cy = window.innerHeight * 0.42;
+
+    parts = Array.from({ length: n }, () => {
+      const ang = Math.random() * Math.PI * 2;
+      const spd = 4 + Math.random() * 11;
+      return {
+        x: cx + (Math.random() - 0.5) * 120,
+        y: cy + (Math.random() - 0.5) * 60,
+        vx: Math.cos(ang) * spd,
+        vy: Math.sin(ang) * spd - 5,
+        w: 6 + Math.random() * 8,
+        h: 4 + Math.random() * 6,
+        rot: Math.random() * Math.PI,
+        vr: (Math.random() - 0.5) * 0.3,
+        color: COLORS[(Math.random() * COLORS.length) | 0],
+        life: 1
+      };
+    });
+
+    if (raf) cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(loop);
+  }
+
+  function loop(){
+    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    let alive = 0;
+
+    for (const p of parts){
+      p.vy += 0.26;              // gravity
+      p.vx *= 0.995;             // drag
+      p.x  += p.vx;
+      p.y  += p.vy;
+      p.rot += p.vr;
+      p.life -= 0.0075;
+      if (p.life <= 0 || p.y > window.innerHeight + 40) continue;
+      alive++;
+
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, Math.min(1, p.life));
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    }
+
+    if (alive > 0){
+      raf = requestAnimationFrame(loop);
+    } else {
+      cv.style.display = 'none';
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      raf = null;
+    }
+  }
+
+  return { fire };
+})();
+
+
+/* ============================================================================
+   10. SPIN THE WHEEL
+   6 slices, every spin wins. Realistic easing via a long cubic-bezier
+   transition on the canvas transform, then confetti + the claim form.
+   ============================================================================ */
+const Wheel = (function(){
+  const cv = $('#wheelCanvas');
+  if (!cv) return {};
+  const ctx = cv.getContext('2d');
+  const B = CONFIG.BONUSES;
+  const N = B.length;
+  const SLICE = 360 / N;                 // 60° per slice
+  const SIZE = cv.width;                 // 760
+  const R = SIZE / 2 - 10;
+  const C = SIZE / 2;
+
+  let rotation = 0, spinning = false, won = null;
+
+  /* ---- paint the wheel once ---- */
+  function draw(){
+    ctx.clearRect(0, 0, SIZE, SIZE);
+
+    // Outer rim
+    ctx.beginPath(); ctx.arc(C, C, R + 8, 0, Math.PI * 2);
+    ctx.fillStyle = '#0B0A1F'; ctx.fill();
+
+    B.forEach((b, i) => {
+      // Slice 0 is centred at the top (where the pointer sits)
+      const start = (-90 - SLICE / 2 + i * SLICE) * Math.PI / 180;
+      const end   = start + SLICE * Math.PI / 180;
+
+      // Slice fill — radial so the hub end is darker (depth)
+      const g = ctx.createRadialGradient(C, C, R * 0.2, C, C, R);
+      g.addColorStop(0, shade(b.color, -34));
+      g.addColorStop(1, b.color);
+
+      ctx.beginPath();
+      ctx.moveTo(C, C);
+      ctx.arc(C, C, R, start, end);
+      ctx.closePath();
+      ctx.fillStyle = g; ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,0.28)'; ctx.lineWidth = 3; ctx.stroke();
+
+      // Label, rotated to sit along the slice.
+      // Slices on the lower half would read upside down, so they get an extra
+      // 180° and their lines are drawn in reverse order to keep line 1 on top.
+      const mid  = start + (end - start) / 2;
+      const base = mid + Math.PI / 2;
+      const norm = Math.atan2(Math.sin(base), Math.cos(base));   // → (-π, π]
+      const flip = Math.abs(norm) > Math.PI / 2;
+      const dir  = flip ? 1 : -1;
+
+      ctx.save();
+      ctx.translate(C, C);
+      ctx.rotate(base + (flip ? Math.PI : 0));
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#FFFFFF';
+      ctx.shadowColor = 'rgba(0,0,0,0.55)'; ctx.shadowBlur = 8; ctx.shadowOffsetY = 2;
+
+      const lines = b.label.split('\n');
+      const LH = 42;
+
+      // A slice is only so wide. Work out the chord width available at the
+      // innermost text line and shrink the font until every line fits, so a
+      // long label can never bleed into the neighbouring slice.
+      const LABEL_R = R * 0.62;
+      const innerR  = LABEL_R - (lines.length - 1) * LH;
+      const maxW    = innerR * 2 * Math.sin(Math.PI / N) * 0.88;
+
+      let fs = lines.length > 1 ? 38 : 42;
+      const setFont = () => { ctx.font = `900 ${fs}px 'Montserrat', sans-serif`; };
+      setFont();
+      const widest = () => Math.max(...lines.map(l => ctx.measureText(l).width));
+      while (fs > 22 && widest() > maxW){ fs -= 2; setFont(); }
+
+      lines.forEach((ln, k) => {
+        const step = flip ? (lines.length - 1 - k) : k;
+        ctx.fillText(ln, 0, dir * LABEL_R + (flip ? -step * LH : step * LH));
+      });
+
+      // Icon sits further out, nearer the rim
+      ctx.shadowBlur = 0;
+      ctx.font = '42px system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif';
+      ctx.fillText(b.icon, 0, dir * R * 0.86);
+      ctx.restore();
+    });
+
+    // Inner ring to cover the slice tips at the hub
+    ctx.beginPath(); ctx.arc(C, C, R * 0.19, 0, Math.PI * 2);
+    ctx.fillStyle = '#0B0A1F'; ctx.fill();
+    ctx.strokeStyle = 'rgba(255,255,255,0.2)'; ctx.lineWidth = 4; ctx.stroke();
+  }
+
+  // Darken/lighten a hex colour by `amt`
+  function shade(hex, amt){
+    const n = parseInt(hex.slice(1), 16);
+    const cl = v => Math.max(0, Math.min(255, v));
+    const r = cl((n >> 16) + amt), g = cl(((n >> 8) & 255) + amt), b = cl((n & 255) + amt);
+    return `rgb(${r},${g},${b})`;
+  }
+
+  /* ---- the spin ---- */
+  function spin(){
+    if (spinning) return;
+    spinning = true;
+
+    const btn = $('#spinBtn');
+    btn.disabled = true;
+    btn.innerHTML = 'Spinning… <span aria-hidden="true">🎡</span>';
+
+    // Every spin wins — pick any slice, uniformly
+    const idx = Math.floor(Math.random() * N);
+    won = B[idx];
+
+    // Land slice `idx` under the top pointer, after several full turns.
+    // Jitter keeps it from always stopping dead-centre.
+    const turns  = 5 + Math.floor(Math.random() * 3);
+    const jitter = (Math.random() - 0.5) * (SLICE * 0.55);
+    const target = rotation + turns * 360 + (360 - idx * SLICE) - (rotation % 360) + jitter;
+
+    const dur = REDUCED ? 0.01 : 5;
+    cv.style.transition = `transform ${dur}s cubic-bezier(.13,.86,.16,1)`;
+    // next frame, so the transition actually applies
+    requestAnimationFrame(() => { cv.style.transform = `rotate(${target}deg)`; });
+    rotation = target;
+
+    setTimeout(finish, dur * 1000 + 60);
+  }
+
+  function finish(){
+    spinning = false;
+    Confetti.fire();
+
+    // Win badge
+    $('#winIcon').textContent = won.icon;
+    $('#winName').textContent = won.name;
+    $('#winBadge').classList.add('show');
+    $('#wheelStatus').textContent = `You won: ${won.name}. Claim it using the form.`;
+
+    // Swap the bonus preview for the claim form
+    $('#bonusPreview').style.display = 'none';
+    $('#claimBox').classList.add('show');
+
+    const btn = $('#spinBtn');
+    btn.innerHTML = 'Bonus won 🎉';
+    btn.disabled = true;
+    $('#wheelHint').textContent = 'Neeche naam aur WhatsApp number dekar bonus claim kijiye.';
+
+    if (window.innerWidth <= 900){
+      $('#winBadge').scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'center' });
+    }
+  }
+
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+  else draw();
+
+  $('#spinBtn').addEventListener('click', spin);
+
+  return { get won(){ return won; } };
+})();
+
+/* ---- Fill the "6 bonuses on the wheel" list from CONFIG ---- */
+(function bonusList(){
+  const ul = $('#bonusListEl');
+  if (!ul) return;
+  ul.innerHTML = CONFIG.BONUSES.map(b =>
+    `<li><span class="bi" aria-hidden="true">${b.icon}</span> ${b.name}</li>`
+  ).join('');
+})();
+
+
+/* ============================================================================
+   11. LEAD CAPTURE
+   Shared validation + submit for the bonus-claim form and the workshop form.
+   ============================================================================ */
+const Leads = (function(){
+
+  /* 10-digit Indian mobile, must start 6-9 */
+  function validPhone(raw){
+    const digits = String(raw).replace(/\D/g, '');
+    const local = digits.length === 12 && digits.startsWith('91') ? digits.slice(2) : digits;
+    return /^[6-9]\d{9}$/.test(local) ? local : null;
+  }
+  function validName(raw){
+    const v = String(raw).trim();
+    return v.length >= 2 ? v : null;
+  }
+
+  /* Send to Google Apps Script. Uses text/plain so the browser skips the
+     CORS preflight that Apps Script cannot answer. Response is opaque
+     (no-cors), so we treat a completed request as success. */
+  async function send(payload){
+    const body = { ...payload, timestamp: new Date().toISOString(), page: location.href };
+
+    if (!CONFIG.LEAD_ENDPOINT){
+      console.info('[KK Create] LEAD_ENDPOINT is empty — lead not sent:', body);
+      return { ok: true, stored: false };
+    }
+    try {
+      await fetch(CONFIG.LEAD_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(body)
+      });
+      return { ok: true, stored: true };
+    } catch (err){
+      console.error('[KK Create] Lead submit failed:', err);
+      return { ok: false, stored: false };
+    }
+  }
+
+  /* Optional WhatsApp hand-off — used when no endpoint is configured */
+  function whatsappFallback(payload){
+    if (!CONFIG.WHATSAPP_FALLBACK || !CONFIG.WHATSAPP_NUMBER) return;
+    const lines = [
+      `Hi KK Create! Main ${CONFIG.COURSE_NAME} ke baare mein jaanna chahta/chahti hoon.`,
+      `Naam: ${payload.name}`,
+      `Number: ${payload.phone}`
+    ];
+    if (payload.bonus) lines.push(`Bonus won: ${payload.bonus}`);
+    if (payload.source) lines.push(`Source: ${payload.source}`);
+    window.open(
+      `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`,
+      '_blank', 'noopener'
+    );
+  }
+
+  return { validPhone, validName, send, whatsappFallback };
+})();
+
+
+/* ============================================================================
+   12. WON-BONUS STATE
+   Remembered in localStorage so the pricing section still shows
+   "included for you" after a reload or a scroll back up.
+   ============================================================================ */
+const WonBonus = (function(){
+  const KEY = 'kk_create_won_bonus';
+
+  function show(name){
+    const row = $('#wonRow');
+    if (!row || !name) return;
+    $('#wonRowName').textContent = name;
+    row.hidden = false;
+  }
+  function save(name){
+    try { localStorage.setItem(KEY, name); } catch (e){ /* private mode */ }
+    show(name);
+  }
+  function restore(){
+    try {
+      const v = localStorage.getItem(KEY);
+      if (v) show(v);
+    } catch (e){ /* ignore */ }
+  }
+  return { save, restore };
+})();
+WonBonus.restore();
+
+
+/* ============================================================================
+   13. FORM HANDLERS
+   ============================================================================ */
+
+/* ---- Bonus claim form (after the spin) ---- */
+(function claimForm(){
+  const form = $('#claimForm');
+  if (!form) return;
+  const nameEl = $('#clName'), phoneEl = $('#clPhone'), btn = $('#claimSubmit');
+
+  phoneEl.addEventListener('input', () => {
+    phoneEl.value = phoneEl.value.replace(/[^\d\s]/g, '');
+    nameEl.closest('.field').classList.remove('invalid');
+    phoneEl.closest('.field').classList.remove('invalid');
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const name  = Leads.validName(nameEl.value);
+    const phone = Leads.validPhone(phoneEl.value);
+    nameEl.closest('.field').classList.toggle('invalid', !name);
+    phoneEl.closest('.field').classList.toggle('invalid', !phone);
+    if (!name){ nameEl.focus(); return; }
+    if (!phone){ phoneEl.focus(); return; }
+
+    btn.disabled = true;
+    btn.textContent = 'Claiming…';
+
+    const bonus = Wheel.won ? Wheel.won.name : '';
+    const res = await Leads.send({ name, phone, source: 'spin-wheel-bonus', bonus });
+
+    // Mirror the win into the pricing section
+    if (bonus) WonBonus.save(bonus);
+
+    $('#claimBox').classList.remove('show');
+    $('#claimDone').classList.add('show');
+    $('#claimDoneMsg').textContent = bonus
+      ? `${bonus} aapke naam par reserve ho gaya hai. Pricing section mein "included for you" dikh raha hai.`
+      : 'Aapka bonus reserve ho gaya hai.';
+
+    if (!res.stored) Leads.whatsappFallback({ name, phone, bonus, source: 'spin-wheel-bonus' });
+  });
+})();
+
+/* ---- Free workshop registration form ---- */
+(function workshopForm(){
+  const form = $('#workshopForm');
+  if (!form) return;
+  const nameEl = $('#wsName'), phoneEl = $('#wsPhone'), btn = $('#wsSubmit');
+
+  phoneEl.addEventListener('input', () => {
+    phoneEl.value = phoneEl.value.replace(/[^\d\s]/g, '');
+    nameEl.closest('.field').classList.remove('invalid');
+    phoneEl.closest('.field').classList.remove('invalid');
+  });
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const name  = Leads.validName(nameEl.value);
+    const phone = Leads.validPhone(phoneEl.value);
+    nameEl.closest('.field').classList.toggle('invalid', !name);
+    phoneEl.closest('.field').classList.toggle('invalid', !phone);
+    if (!name){ nameEl.focus(); return; }
+    if (!phone){ phoneEl.focus(); return; }
+
+    btn.disabled = true;
+    btn.textContent = 'Registering…';
+
+    const res = await Leads.send({ name, phone, source: 'free-workshop', bonus: '' });
+
+    form.innerHTML =
+      `<div class="claim-done show" style="margin:0">
+         <h3>Seat reserved ✅</h3>
+         <p>Thanks ${name}! Workshop ka joining link aapke WhatsApp par bhej denge.</p>
+       </div>`;
+    $('#wsStatus').textContent = 'Registration complete.';
+    Confetti.fire(LOW_POWER ? 50 : 100);
+
+    if (!res.stored) Leads.whatsappFallback({ name, phone, source: 'free-workshop' });
+  });
+})();
+
+
+/* ============================================================================
+   14. APPLY CONFIG TO THE PAGE
+   Price, workshop date/time and checkout links are all driven from CONFIG.
+   ============================================================================ */
+(function applyConfig(){
+  // Price
+  const now = $('#priceNow'); if (now) now.textContent = CONFIG.PRICE;
+  const was = $('#priceWas');
+  if (was){
+    if (CONFIG.PRICE_COMPARE) was.textContent = CONFIG.PRICE_COMPARE;
+    else was.style.display = 'none';
+  }
+  const meta = $('#priceMeta'); if (meta) meta.textContent = CONFIG.PRICE_NOTE;
+  const buyPrice = $('#buyPrice'); if (buyPrice) buyPrice.textContent = CONFIG.PRICE;
+  $$('.buy-price').forEach(el => el.textContent = CONFIG.PRICE);
+  // Header + hero CTAs that hard-code the price in their label
+  $$('[data-cta="header"], [data-cta="hero-primary"], [data-cta="modules"], [data-cta="creator-card-after"]')
+    .forEach(el => { el.innerHTML = el.innerHTML.replace(/₹999/g, CONFIG.PRICE); });
+
+  // Workshop date/time — keeps the dashed placeholder style until filled in
+  const wd = $('#whDate'), wt = $('#whTime');
+  if (wd){
+    wd.textContent = CONFIG.WORKSHOP_DATE;
+    if (!/^\[/.test(CONFIG.WORKSHOP_DATE)) wd.classList.remove('ph');
+  }
+  if (wt){
+    wt.textContent = CONFIG.WORKSHOP_TIME;
+    if (!/^\[/.test(CONFIG.WORKSHOP_TIME)) wt.classList.remove('ph');
+  }
+
+  // Checkout buttons
+  const buyButtons = ['#buyBtn', '#buyBtn2', '#buyBtn3'].map(s => $(s)).filter(Boolean);
+  buyButtons.forEach(btn => {
+    if (CONFIG.CHECKOUT_URL){
+      btn.href = CONFIG.CHECKOUT_URL;
+      btn.target = '_blank';
+      btn.rel = 'noopener';
+    } else {
+      // No checkout link yet → send people to the free workshop form instead
+      btn.href = '#workshop';
+      btn.addEventListener('click', () => {
+        console.info('[KK Create] CONFIG.CHECKOUT_URL is empty — add your payment link.');
+      });
+    }
+  });
+
+  // Footer year
+  const y = $('#year'); if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
